@@ -11,7 +11,6 @@ import { DatabaseModule } from './db/database.module';
         MONGO_USERNAME: Joi.string().required(),
         MONGO_PASSWORD: Joi.string().required(),
         MONGO_DATABASE: Joi.string().required(),
-        MONGO_HOST: Joi.string().required(),
       }),
     }),
     DatabaseModule,

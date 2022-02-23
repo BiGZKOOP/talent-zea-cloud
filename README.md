@@ -1,2 +1,2 @@
 # tenant-zea-cloud
-Tenant Zea Cloud Project
+Talent Zea Cloud Project

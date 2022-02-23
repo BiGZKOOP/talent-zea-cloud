@@ -1,10 +1,23 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import * as Joi from '@hapi/joi';
+import { CustomerModule } from './model/customer/customer.module';
+import { DatabaseModule } from './db/database.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      validationSchema: Joi.object({
+        MONGO_USERNAME: Joi.string().required(),
+        MONGO_PASSWORD: Joi.string().required(),
+        MONGO_DATABASE: Joi.string().required(),
+        MONGO_HOST: Joi.string().required(),
+      }),
+    }),
+    DatabaseModule,
+    CustomerModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { IsEmail, IsNotEmpty, IsString, MinLength } from 'class-validator';
 
-export class UpdateCustomerDto {
+export class RegisterDto {
   @IsString()
   @IsNotEmpty()
   name: string;
@@ -27,6 +27,4 @@ export class UpdateCustomerDto {
   @IsString()
   @IsNotEmpty()
   dob: string;
-  @IsString()
-  image?: string;
 }

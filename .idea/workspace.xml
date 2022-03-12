@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/authentication.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/authentication.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/authentication.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/dto/create-authentication.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/dto/register.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/entities/authentication.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/jwt-authentication.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/jwt-refresh-token.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/jwt.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/local.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/localAuthentication.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/requestWithUser.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/authentication/tokenPayload.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/database.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/database.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +43,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="InitialBranch" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25WRlK2pHeDLTQajEWQ29TrXovt" />
   <component name="ProjectLevelVcsManager">
@@ -52,6 +79,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\src\model\authentication\dto" />
       <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud" />
     </key>
   </component>
@@ -78,6 +106,18 @@
       <workItem from="1645641011971" duration="19000" />
       <workItem from="1645641103787" duration="1561000" />
       <workItem from="1645642721004" duration="2118000" />
+      <workItem from="1645648160130" duration="177000" />
+      <workItem from="1645648424512" duration="8000" />
+      <workItem from="1645944245386" duration="70000" />
+      <workItem from="1645973981042" duration="1977000" />
+      <workItem from="1646042733932" duration="388000" />
+      <workItem from="1646070645978" duration="6000" />
+      <workItem from="1646367673470" duration="10711000" />
+      <workItem from="1646411951092" duration="7000" />
+      <workItem from="1646412094728" duration="165000" />
+      <workItem from="1646458615999" duration="13001000" />
+      <workItem from="1646728474830" duration="1381000" />
+      <workItem from="1647056080462" duration="2803000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -116,7 +156,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

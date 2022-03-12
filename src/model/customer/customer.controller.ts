@@ -27,6 +27,12 @@ export class CustomerController {
     const schema = Joi.object({
       name: Joi.string().required(),
       address: Joi.string().required(),
+      nicNumber: Joi.string().required(),
+      password: Joi.string().required(),
+      email: Joi.string().required(),
+      countryCode: Joi.string().required(),
+      phoneNumber: Joi.string().required(),
+      dob: Joi.string().required(),
     });
     const validation = schema.validate(createCustomerDto);
     if (validation.error) {

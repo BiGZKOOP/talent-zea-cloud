@@ -1,28 +1,38 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
-  Res,
+  Get,
   HttpStatus,
+  Param,
+  Patch,
+  Post,
+  Res,
+  UploadedFile,
+  UseInterceptors,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDto } from './dto/create-customer.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
 import { Response } from 'express';
 import * as Joi from '@hapi/joi';
+import MongooseClassSerializerInterceptor from '../../config/mongooseClassSerializer.interceptor';
+import { CustomerSchema } from './entities/customer.schema';
+import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('customer')
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+@UseInterceptors(MongooseClassSerializerInterceptor(CustomerSchema))
 export class CustomerController {
   constructor(private readonly customerService: CustomerService) {}
 
   @Post()
-  async create(
+  @UseInterceptors(FileInterceptor('image'))
+  async createCustomer(
     @Body() createCustomerDto: CreateCustomerDto,
     @Res() response: Response,
+    @UploadedFile() file: Express.Multer.File,
   ) {
     const schema = Joi.object({
       name: Joi.string().required(),
@@ -41,12 +51,87 @@ export class CustomerController {
       const customerModel: CreateCustomerDto = validation.value;
       try {
         const customer = await this.customerService.create(customerModel);
-        if (customer) {
-          response.status(201).send({
-            statusCode: HttpStatus.OK,
-            message: 'Customer created successfully',
-            customer,
-          });
+        if (customer && file) {
+          const image = await this.customerService.addImage(
+            customer._id,
+            file.buffer,
+            file.originalname,
+          );
+          if (image) {
+            response.status(201).send({
+              statusCode: HttpStatus.OK,
+              message: 'Customer created successfully',
+              image,
+              customer,
+            });
+          }
+        } else {
+          if (customer) {
+            response.status(201).send({
+              statusCode: HttpStatus.OK,
+              message: 'Customer created successfully',
+              customer,
+            });
+          }
+        }
+      } catch (error) {
+        console.log(error);
+        response.status(401).send(error);
+      }
+    }
+  }
+
+  @Patch('update/:id')
+  @UseInterceptors(FileInterceptor('image'))
+  async update(
+    @Param('id') id: string,
+    @Body() updateCustomerDto: UpdateCustomerDto,
+    @Res() response: Response,
+    @UploadedFile() file: Express.Multer.File,
+  ) {
+    const schema = Joi.object({
+      name: Joi.string().required(),
+      address: Joi.string().required(),
+      nicNumber: Joi.string().required(),
+      password: Joi.string().required(),
+      email: Joi.string().required(),
+      countryCode: Joi.string().required(),
+      phoneNumber: Joi.string().required(),
+      dob: Joi.string().required(),
+    });
+    const validation = schema.validate(updateCustomerDto);
+    if (validation.error) {
+      response.status(401).send(validation.error);
+    } else {
+      const customerModel: UpdateCustomerDto = validation.value;
+      try {
+        const updateCustomer = await this.customerService.update(
+          id,
+          customerModel,
+        );
+        if (updateCustomer && file) {
+          const updateID = updateCustomer._id;
+          const image = await this.customerService.addImage(
+            updateID,
+            file.buffer,
+            file.originalname,
+          );
+          if (image) {
+            response.status(201).send({
+              statusCode: HttpStatus.OK,
+              message: 'Customer Update successfully',
+              image,
+              updateCustomer,
+            });
+          }
+        } else {
+          if (updateCustomer) {
+            response.status(201).send({
+              statusCode: HttpStatus.OK,
+              message: 'Customer Update successfully',
+              updateCustomer,
+            });
+          }
         }
       } catch (error) {
         console.log(error);
@@ -63,14 +148,6 @@ export class CustomerController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.customerService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(
-    @Param('id') id: string,
-    @Body() updateCustomerDto: UpdateCustomerDto,
-  ) {
-    return this.customerService.update(+id, updateCustomerDto);
   }
 
   @Delete(':id')

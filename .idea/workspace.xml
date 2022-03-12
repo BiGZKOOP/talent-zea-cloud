@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/authentication.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/authentication.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/authentication.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/dto/create-authentication.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/dto/register.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/entities/authentication.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/jwt-authentication.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/jwt-refresh-token.strategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/jwt.strategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/local.strategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/localAuthentication.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/requestWithUser.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/authentication/tokenPayload.interface.ts" afterDir="false" />
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update Customer">
+      <change afterPath="$PROJECT_DIR$/src/config/mongooseClassSerializer.interceptor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/database.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/database.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer/customer.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/update-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/update-customer.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/file-service/dto/update-file-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/file-service/dto/update-file-service.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/file-service/entities/file-service.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/file-service/entities/file-service.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/file-service/file-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/file-service/file-service.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/file-service/file-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/file-service/file-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="addOtherConfig" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,7 +107,7 @@
       <workItem from="1646412094728" duration="165000" />
       <workItem from="1646458615999" duration="13001000" />
       <workItem from="1646728474830" duration="1381000" />
-      <workItem from="1647056080462" duration="2803000" />
+      <workItem from="1647056080462" duration="18465000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -140,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645644661483</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial Commit">
+      <created>1647059183502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647059183502</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +157,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Done: Update Customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Update Customer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

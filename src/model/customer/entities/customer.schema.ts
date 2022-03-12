@@ -1,6 +1,11 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { v4 as uuidv4 } from 'uuid';
+import {
+  FileService,
+  FileServiceSchema,
+} from '../../file-service/entities/file-service.schema';
+import { Type } from 'class-transformer';
 
 export type CustomerDocument = Customer & Document;
 
@@ -31,6 +36,10 @@ export class Customer {
   dob: string;
   @Prop({ required: false })
   currentHashedRefreshToken?: string;
+  // @Prop({ required: false, type: FileServiceSchema })
+  // @Type(() => FileService)
+  @Prop({ required: false })
+  image?: string;
 }
 
 export const CustomerSchema = SchemaFactory.createForClass(Customer);

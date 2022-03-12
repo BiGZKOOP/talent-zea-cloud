@@ -1,4 +1,9 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreateCustomerDto } from './dto/create-customer.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
 import { Model } from 'mongoose';
@@ -6,12 +11,14 @@ import * as bcrypt from 'bcrypt';
 import { InjectModel } from '@nestjs/mongoose';
 import { Customer, CustomerDocument } from './entities/customer.schema';
 import { RegisterDto } from '../authentication/dto/register.dto';
+import { FileServiceService } from '../file-service/file-service.service';
 
 @Injectable()
 export class CustomerService {
   constructor(
     @InjectModel(Customer.name)
     private customerModel: Model<CustomerDocument>,
+    private readonly fileUploadService: FileServiceService,
   ) {}
 
   async getByEmail(email: string): Promise<Customer> {
@@ -35,6 +42,25 @@ export class CustomerService {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  async addImage(id: string, imageBuffer: Buffer, filename: string) {
+    const image = await this.fileUploadService.uploadPublicFile(
+      imageBuffer,
+      filename,
+    );
+    // console.log('Log 2', image);
+    const item = await this.getById(id);
+    // console.log('log 3', item);
+    const userId = item._id;
+    await this.customerModel.updateOne(
+      { userId },
+      {
+        image: image.url,
+      },
+    );
+    // console.log('log 4 ', image);
+    return image;
   }
 
   async register(registrationData: RegisterDto): Promise<Customer> {
@@ -98,8 +124,15 @@ export class CustomerService {
     return `This action returns a #${id} customer`;
   }
 
-  update(id: number, updateCustomerDto: UpdateCustomerDto) {
-    return `This action updates a #${id} customer`;
+  async update(id: string, updateCustomerDto: UpdateCustomerDto) {
+    // console.log('updateCustomerDto', id);
+    const customerUpdate = await this.customerModel
+      .findByIdAndUpdate(id, updateCustomerDto)
+      .setOptions({ overwrite: true, new: true });
+    if (!customerUpdate) {
+      throw new NotFoundException();
+    }
+    return customerUpdate;
   }
 
   remove(id: number) {

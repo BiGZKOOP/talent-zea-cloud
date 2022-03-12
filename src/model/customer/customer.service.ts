@@ -41,6 +41,7 @@ export class CustomerService {
       }
     } catch (error) {
       console.log(error);
+      throw error;
     }
   }
 
@@ -116,8 +117,20 @@ export class CustomerService {
       },
     );
   }
-  findAll() {
-    return `This action returns all customer`;
+  async findAll(documentsToSkip = 0, limitOfDocuments?: number) {
+    const findQuery = this.customerModel
+      .find()
+      .sort({ _id: 1 })
+      .skip(documentsToSkip)
+      .populate('countryCode')
+      .populate('name');
+    if (limitOfDocuments) {
+      findQuery.limit(limitOfDocuments);
+    }
+    const results = await findQuery;
+    const count = await this.customerModel.count();
+
+    return { results, count };
   }
 
   findOne(id: number) {

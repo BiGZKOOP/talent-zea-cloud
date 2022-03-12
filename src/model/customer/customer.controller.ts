@@ -3,10 +3,12 @@ import {
   Controller,
   Delete,
   Get,
+  HttpException,
   HttpStatus,
   Param,
   Patch,
   Post,
+  Query,
   Res,
   UploadedFile,
   UseInterceptors,
@@ -19,6 +21,7 @@ import * as Joi from '@hapi/joi';
 import MongooseClassSerializerInterceptor from '../../config/mongooseClassSerializer.interceptor';
 import { CustomerSchema } from './entities/customer.schema';
 import { FileInterceptor } from '@nestjs/platform-express';
+import { PaginationParams } from '../../helpers/PaginationParams';
 
 @Controller('customer')
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -76,7 +79,16 @@ export class CustomerController {
         }
       } catch (error) {
         console.log(error);
-        response.status(401).send(error);
+        if (error?.code === 11000) {
+          throw new HttpException(
+            'User with that email already exists',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+        throw new HttpException(
+          'Something went wrong',
+          HttpStatus.INTERNAL_SERVER_ERROR,
+        );
       }
     }
   }
@@ -141,10 +153,9 @@ export class CustomerController {
   }
 
   @Get()
-  findAll() {
-    return this.customerService.findAll();
+  async getAllCustomer(@Query() { skip, limit }: PaginationParams) {
+    return this.customerService.findAll(skip, limit);
   }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.customerService.findOne(+id);

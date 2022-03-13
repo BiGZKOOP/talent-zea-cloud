@@ -10,10 +10,10 @@ export class UpdateCustomerDto {
   @IsString()
   @IsNotEmpty()
   nicNumber: string;
-  @IsString()
-  @IsNotEmpty()
-  @MinLength(6)
-  password: string;
+  // @IsString()
+  // @IsNotEmpty()
+  // @MinLength(6)
+  // password: string;
   @IsString()
   @IsNotEmpty()
   @IsEmail()
@@ -27,6 +27,4 @@ export class UpdateCustomerDto {
   @IsString()
   @IsNotEmpty()
   dob: string;
-  @IsString()
-  image?: string;
 }

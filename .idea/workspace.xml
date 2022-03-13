@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update Customer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/update-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/update-customer.dto.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

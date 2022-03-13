@@ -105,7 +105,7 @@ export class CustomerController {
       name: Joi.string().required(),
       address: Joi.string().required(),
       nicNumber: Joi.string().required(),
-      password: Joi.string().required(),
+      // password: Joi.string().required(),
       email: Joi.string().required(),
       countryCode: Joi.string().required(),
       phoneNumber: Joi.string().required(),
@@ -117,9 +117,11 @@ export class CustomerController {
     } else {
       const customerModel: UpdateCustomerDto = validation.value;
       try {
+        const findPassword = await this.customerService.getById(id);
         const updateCustomer = await this.customerService.update(
           id,
           customerModel,
+          findPassword.password,
         );
         if (updateCustomer && file) {
           const updateID = updateCustomer._id;

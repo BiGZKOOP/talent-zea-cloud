@@ -26,43 +26,44 @@ export class AuthenticationController {
     private readonly customerService: CustomerService,
   ) {}
 
-  @Post('register')
-  async register(
-    @Body() registrationData: RegisterDto,
-    @Res() response: Response,
-  ) {
-    const schema = Joi.object({
-      name: Joi.string().required(),
-      address: Joi.string().required(),
-      nicNumber: Joi.string().required(),
-      password: Joi.string().required(),
-      email: Joi.string().required(),
-      countryCode: Joi.string().required(),
-      phoneNumber: Joi.string().required(),
-      dob: Joi.string().required(),
-    });
-    const validation = schema.validate(registrationData);
-    if (validation.error) {
-      response.status(401).send(validation.error);
-    } else {
-      const customerModel: RegisterDto = validation.value;
-      try {
-        const register = await this.authenticationService.register(
-          customerModel,
-        );
-        if (register) {
-          response.status(201).send({
-            statusCode: HttpStatus.OK,
-            message: 'Customer Registered successfully',
-            register,
-          });
-        }
-      } catch (error) {
-        console.log(error);
-        response.status(401).send(error);
-      }
-    }
-  }
+  //For Cognito Thing
+  // @Post('register')
+  // async register(
+  //   @Body() registrationData: RegisterDto,
+  //   @Res() response: Response,
+  // ) {
+  //   const schema = Joi.object({
+  //     name: Joi.string().required(),
+  //     address: Joi.string().required(),
+  //     nicNumber: Joi.string().required(),
+  //     password: Joi.string().required(),
+  //     email: Joi.string().required(),
+  //     countryCode: Joi.string().required(),
+  //     phoneNumber: Joi.string().required(),
+  //     dob: Joi.string().required(),
+  //   });
+  //   const validation = schema.validate(registrationData);
+  //   if (validation.error) {
+  //     response.status(401).send(validation.error);
+  //   } else {
+  //     const customerModel: RegisterDto = validation.value;
+  //     try {
+  //       const register = await this.authenticationService.register(
+  //         customerModel,
+  //       );
+  //       if (register) {
+  //         response.status(201).send({
+  //           statusCode: HttpStatus.OK,
+  //           message: 'Customer Registered successfully',
+  //           register,
+  //         });
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //       response.status(401).send(error);
+  //     }
+  //   }
+  // }
 
   @HttpCode(200)
   @UseGuards(LocalAuthenticationGuard)
@@ -96,13 +97,14 @@ export class AuthenticationController {
     );
   }
 
-  @UseGuards(JwtAuthenticationGuard)
-  @Get()
-  authenticate(@Req() request: RequestWithCustomer) {
-    const customer = request.user;
-    customer.password = undefined;
-    return customer;
-  }
+  //For Cognito Thing
+  // @UseGuards(JwtAuthenticationGuard)
+  // @Get()
+  // authenticate(@Req() request: RequestWithCustomer) {
+  //   const customer = request.user;
+  //   customer.password = undefined;
+  //   return customer;
+  // }
 
   @UseGuards(JwtRefreshGuard)
   @Get('refresh')

@@ -29,46 +29,50 @@ export class AuthenticationService {
     }
   }
 
-  public async register(registrationData: RegisterDto) {
-    const hashedPassword = await bcrypt.hash(registrationData.password, 10);
-    try {
-      const createdUser = await this.customerService.register({
-        ...registrationData,
-        password: hashedPassword,
-      });
-      createdUser.password = undefined;
-      return createdUser;
-    } catch (error) {
-      if (error?.code === 11000) {
-        throw new HttpException(
-          'User with that email already exists',
-          HttpStatus.BAD_REQUEST,
-        );
-      }
-      throw new HttpException(
-        'Something went wrong',
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
-  }
+  //For Cognito Thing
 
-  public async getAuthenticatedUser(email: string, plainTextPassword: string) {
-    try {
-      const customer = await this.customerService.getByEmail(email);
-      await AuthenticationService.verifyPassword(
-        plainTextPassword,
-        customer.password,
-      );
-      customer.password = undefined;
-      return customer;
-    } catch (error) {
-      // console.log(error);
-      throw new HttpException(
-        'Wrong credentials provided',
-        HttpStatus.BAD_REQUEST,
-      );
-    }
-  }
+  // public async register(registrationData: RegisterDto) {
+  //   const hashedPassword = await bcrypt.hash(registrationData.password, 10);
+  //   try {
+  //     const createdUser = await this.customerService.register({
+  //       ...registrationData,
+  //       password: hashedPassword,
+  //     });
+  //     createdUser.password = undefined;
+  //     return createdUser;
+  //   } catch (error) {
+  //     if (error?.code === 11000) {
+  //       throw new HttpException(
+  //         'User with that email already exists',
+  //         HttpStatus.BAD_REQUEST,
+  //       );
+  //     }
+  //     throw new HttpException(
+  //       'Something went wrong',
+  //       HttpStatus.INTERNAL_SERVER_ERROR,
+  //     );
+  //   }
+  // }
+
+  //For Cognito Thing
+
+  // public async getAuthenticatedUser(email: string, plainTextPassword: string) {
+  //   try {
+  //     const customer = await this.customerService.getByEmail(email);
+  //     await AuthenticationService.verifyPassword(
+  //       plainTextPassword,
+  //       customer.password,
+  //     );
+  //     customer.password = undefined;
+  //     return customer;
+  //   } catch (error) {
+  //     // console.log(error);
+  //     throw new HttpException(
+  //       'Wrong credentials provided',
+  //       HttpStatus.BAD_REQUEST,
+  //     );
+  //   }
+  // }
 
   public getCookieWithJwtAccessToken(_id: string) {
     const payload: TokenPayload = { _id };

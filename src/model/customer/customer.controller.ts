@@ -153,9 +153,9 @@ export class CustomerController {
   }
 
   @Get(':me')
-  async getUserByName(@Res() response: Response, @Param('me') me: string) {
+  async getCurrentUser(@Res() response: Response, @Param('me') me: string) {
     try {
-      const userExit = await this.customerService.findByUserName(me);
+      const userExit = await this.customerService.getByEmail(me);
       if (userExit) {
         response.status(201).send({
           statusCode: HttpStatus.OK,

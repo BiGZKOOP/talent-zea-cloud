@@ -11,7 +11,8 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
       usernameField: 'email',
     });
   }
-  async validate(email: string, password: string): Promise<Customer> {
-    return this.authenticationService.getAuthenticatedUser(email, password);
-  }
+  //For Cognito Thing
+  // async validate(email: string, password: string): Promise<Customer> {
+  //   return this.authenticationService.getAuthenticatedUser(email, password);
+  // }
 }

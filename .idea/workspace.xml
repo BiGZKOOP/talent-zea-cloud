@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update Customer">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Fix Edit User Bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/authentication/authentication.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/authentication/authentication.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/authentication/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/authentication/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/authentication/local.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/authentication/local.strategy.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/update-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/update-customer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="addOtherConfig" />
+        <entry key="$PROJECT_DIR$" value="customerCrud" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,6 +101,14 @@
       <workItem from="1646458615999" duration="13001000" />
       <workItem from="1646728474830" duration="1381000" />
       <workItem from="1647056080462" duration="22709000" />
+      <workItem from="1647243126629" duration="16000" />
+      <workItem from="1647280496844" duration="2000" />
+      <workItem from="1647281321014" duration="454000" />
+      <workItem from="1647361248857" duration="89000" />
+      <workItem from="1647362140432" duration="239000" />
+      <workItem from="1647362758109" duration="606000" />
+      <workItem from="1647453608333" duration="1255000" />
+      <workItem from="1647583209186" duration="3107000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -140,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647094412875</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Done: Fix Edit User Bug">
+      <created>1647156167534</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647156167534</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +180,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Done: Update Customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Update Customer" />
+    <MESSAGE value="Done: Fix Edit User Bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Fix Edit User Bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

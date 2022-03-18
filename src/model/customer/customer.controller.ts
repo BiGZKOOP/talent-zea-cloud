@@ -41,7 +41,7 @@ export class CustomerController {
       name: Joi.string().required(),
       address: Joi.string().required(),
       nicNumber: Joi.string().required(),
-      password: Joi.string().required(),
+      // password: Joi.string().required(),
       email: Joi.string().required(),
       countryCode: Joi.string().required(),
       phoneNumber: Joi.string().required(),
@@ -117,11 +117,9 @@ export class CustomerController {
     } else {
       const customerModel: UpdateCustomerDto = validation.value;
       try {
-        const findPassword = await this.customerService.getById(id);
         const updateCustomer = await this.customerService.update(
           id,
           customerModel,
-          findPassword.password,
         );
         if (updateCustomer && file) {
           const updateID = updateCustomer._id;
@@ -151,6 +149,26 @@ export class CustomerController {
         console.log(error);
         response.status(401).send(error);
       }
+    }
+  }
+
+  @Get(':me')
+  async getUserByName(@Res() response: Response, @Param('me') me: string) {
+    try {
+      const userExit = await this.customerService.findByUserName(me);
+      if (userExit) {
+        response.status(201).send({
+          statusCode: HttpStatus.OK,
+          message: 'Customer Is in-the DB',
+          userExit,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      throw new HttpException(
+        'User with this name does not exist',
+        HttpStatus.NOT_FOUND,
+      );
     }
   }
 

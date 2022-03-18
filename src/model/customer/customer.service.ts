@@ -32,6 +32,19 @@ export class CustomerService {
     );
   }
 
+  async findByUserName(name: string): Promise<Customer> {
+    console.log(name);
+    const user = await this.customerModel.findOne({ name });
+    console.log(user);
+    if (user) {
+      return user;
+    }
+    throw new HttpException(
+      'User with this name does not exist',
+      HttpStatus.NOT_FOUND,
+    );
+  }
+
   async create(createCustomerDto: CreateCustomerDto): Promise<Customer> {
     try {
       const createCustomer = new this.customerModel(createCustomerDto);
@@ -137,14 +150,9 @@ export class CustomerService {
     return `This action returns a #${id} customer`;
   }
 
-  async update(
-    id: string,
-    updateCustomerDto: UpdateCustomerDto,
-    password: any,
-  ) {
-    // console.log('updateCustomerDto', id);
+  async update(id: string, updateCustomerDto: UpdateCustomerDto) {
     const customerUpdate = await this.customerModel
-      .findByIdAndUpdate(id, { ...updateCustomerDto, password: password })
+      .findByIdAndUpdate(id, { ...updateCustomerDto })
       .setOptions({ overwrite: true, new: true });
     if (!customerUpdate) {
       throw new NotFoundException();

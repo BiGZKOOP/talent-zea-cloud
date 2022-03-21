@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: /me">
-      <change afterPath="$PROJECT_DIR$/src/model/main-service/dto/create-main-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/main-service/dto/update-main-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/main-service/main-service.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service-image.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/file-service/file-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/file-service/file-service.controller.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Main / Sub Service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

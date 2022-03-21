@@ -155,12 +155,12 @@ export class CustomerController {
   @Get(':me')
   async getCurrentUser(@Res() response: Response, @Param('me') me: string) {
     try {
-      const userExit = await this.customerService.getByEmail(me);
-      if (userExit) {
+      const data = await this.customerService.getByEmail(me);
+      if (data) {
         response.status(201).send({
           statusCode: HttpStatus.OK,
           message: 'Customer Is in-the DB',
-          userExit,
+          data,
         });
       }
     } catch (error) {

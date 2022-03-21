@@ -5,6 +5,8 @@ import { CustomerModule } from './model/customer/customer.module';
 import { DatabaseModule } from './db/database.module';
 import { AuthenticationModule } from './model/authentication/authentication.module';
 import { FileServiceModule } from './model/file-service/file-service.module';
+import { MainServiceModule } from './model/main-service/main-service.module';
+import { SubServiceModule } from './model/sub-service/sub-service.module';
 
 @Module({
   imports: [
@@ -28,6 +30,8 @@ import { FileServiceModule } from './model/file-service/file-service.module';
     CustomerModule,
     AuthenticationModule,
     FileServiceModule,
+    MainServiceModule,
+    SubServiceModule,
   ],
   controllers: [],
   providers: [],

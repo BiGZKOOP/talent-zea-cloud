@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { v4 as uuidv4 } from 'uuid';
+import mongoose from 'mongoose';
 
 export type MainServiceDocument = MainService & Document;
 
@@ -16,7 +17,13 @@ export class MainService {
   @Prop()
   mainTopic: string;
   @Prop()
-  subTopic: string;
+  mainTopicDescription: string;
+  @Prop({ type: mongoose.Schema.Types.Mixed, required: false })
+  image: {
+    image1: string;
+    image2: string;
+    image3: string;
+  };
 }
 
 export const MainServiceSchema = SchemaFactory.createForClass(MainService);

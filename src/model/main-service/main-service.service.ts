@@ -7,12 +7,14 @@ import {
   MainServiceDocument,
 } from './entities/main-service.schema';
 import { Model } from 'mongoose';
+import { FileServiceService } from '../file-service/file-service.service';
 
 @Injectable()
 export class MainServiceService {
   constructor(
     @InjectModel(MainService.name)
     private readonly mainServiceModel: Model<MainServiceDocument>,
+    private readonly fileUploadService: FileServiceService,
   ) {}
 
   async create(
@@ -30,6 +32,91 @@ export class MainServiceService {
     }
   }
 
+  async addServiceImage(
+    id: string,
+    imageBuffer: Buffer,
+    filename: string,
+    imageData: string,
+  ) {
+    if (imageData === 'image1') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          subTopic: item.mainTopicDescription,
+          mainTopic: item.mainTopic,
+          image: {
+            image1: image.url,
+          },
+        };
+        await this.mainServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ overwrite: true, new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+    if (imageData === 'image2') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          subTopic: item.mainTopicDescription,
+          mainTopic: item.mainTopic,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : '',
+            image2: image.url,
+          },
+        };
+        await this.mainServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ overwrite: true, new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+    if (imageData === 'image3') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          subTopic: item.mainTopicDescription,
+          mainTopic: item.mainTopic,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : '',
+            image2: item.image.image2 ? item.image.image2 : '',
+            image3: image.url,
+          },
+        };
+        await this.mainServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ overwrite: true, new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+  }
   async findAll() {
     try {
       const allMainService = await this.mainServiceModel.find();

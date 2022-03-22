@@ -1,10 +1,17 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateMainServiceDto } from './create-main-service.dto';
-import { IsString } from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
 
 export class UpdateMainServiceDto extends PartialType(CreateMainServiceDto) {
   @IsString()
+  @IsNotEmpty()
   mainTopic: string;
   @IsString()
-  subTopic: string;
+  @IsNotEmpty()
+  mainTopicDescription: string;
+  image: {
+    image1: string;
+    image2: string;
+    image3: string;
+  };
 }

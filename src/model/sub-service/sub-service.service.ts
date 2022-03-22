@@ -138,6 +138,20 @@ export class SubServiceService {
     }
   }
 
+  async getSubMainService(mainService: string) {
+    try {
+      const service = await this.subServiceModel
+        .find({ mainService })
+        .populate('mainService');
+      if (!service) {
+        throw new NotFoundException();
+      }
+      return service;
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
+  }
   async update(id: string, updateSubServiceDto: UpdateSubServiceDto) {
     const updateSubService = await this.subServiceModel
       .findByIdAndUpdate(id, { ...updateSubServiceDto })

@@ -9,7 +9,6 @@ import {
   Res,
   HttpStatus,
   UseInterceptors,
-  UploadedFile,
   UploadedFiles,
 } from '@nestjs/common';
 import { SubServiceService } from './sub-service.service';
@@ -17,10 +16,7 @@ import { CreateSubServiceDto } from './dto/create-sub-service.dto';
 import { UpdateSubServiceDto } from './dto/update-sub-service.dto';
 import { Response } from 'express';
 import * as Joi from '@hapi/joi';
-import {
-  FileFieldsInterceptor,
-  FileInterceptor,
-} from '@nestjs/platform-express';
+import { FileFieldsInterceptor } from '@nestjs/platform-express';
 
 @Controller('sub-service')
 export class SubServiceController {
@@ -116,6 +112,11 @@ export class SubServiceController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.subServiceService.findOne(id);
+  }
+
+  @Get('main/:id')
+  async getSubMainService(@Param('id') id: string) {
+    return this.subServiceService.getSubMainService(id);
   }
 
   @Patch(':id')

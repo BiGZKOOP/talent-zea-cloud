@@ -18,7 +18,7 @@ export class Customer {
     },
   })
   _id: string;
-  @Prop({ unique: true })
+  @Prop()
   name: string;
   @Prop()
   address: string;

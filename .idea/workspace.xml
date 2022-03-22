@@ -1,31 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Main / Sub Service">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/dto/create-main-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/dto/create-main-service.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/dto/update-main-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/dto/update-main-service.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="_me-EndPoint" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="25WRlK2pHeDLTQajEWQ29TrXovt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\node_modules\eslint" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\src\model\authentication\dto" />
+      <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start:dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,10 +89,140 @@
       <option name="presentableId" value="Default" />
       <updated>1645641007832</updated>
       <workItem from="1645641011971" duration="19000" />
+      <workItem from="1645641103787" duration="1561000" />
+      <workItem from="1645642721004" duration="2118000" />
+      <workItem from="1645648160130" duration="177000" />
+      <workItem from="1645648424512" duration="8000" />
+      <workItem from="1645944245386" duration="70000" />
+      <workItem from="1645973981042" duration="1977000" />
+      <workItem from="1646042733932" duration="388000" />
+      <workItem from="1646070645978" duration="6000" />
+      <workItem from="1646367673470" duration="10711000" />
+      <workItem from="1646411951092" duration="7000" />
+      <workItem from="1646412094728" duration="165000" />
+      <workItem from="1646458615999" duration="13001000" />
+      <workItem from="1646728474830" duration="1381000" />
+      <workItem from="1647056080462" duration="22709000" />
+      <workItem from="1647243126629" duration="16000" />
+      <workItem from="1647280496844" duration="2000" />
+      <workItem from="1647281321014" duration="454000" />
+      <workItem from="1647361248857" duration="89000" />
+      <workItem from="1647362140432" duration="239000" />
+      <workItem from="1647362758109" duration="606000" />
+      <workItem from="1647453608333" duration="1255000" />
+      <workItem from="1647583209186" duration="4376000" />
+      <workItem from="1647617234599" duration="2920000" />
+      <workItem from="1647692415813" duration="17854000" />
+      <workItem from="1647765925956" duration="12372000" />
+      <workItem from="1647882314478" duration="901000" />
+      <workItem from="1647926479130" duration="2996000" />
+      <workItem from="1647941714790" duration="8657000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1645641195531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645641195531</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1645643081477</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645643081477</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <created>1645644661483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1645644661483</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial Commit">
+      <created>1647059183502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647059183502</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Done: Update Customer">
+      <created>1647079204229</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647079204229</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Done: Update Customer">
+      <created>1647094412875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647094412875</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Done: Fix Edit User Bug">
+      <created>1647156167534</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647156167534</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Done: /me">
+      <created>1647593419403</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647593419404</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Done: /me">
+      <created>1647617415936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647617415936</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Done: Main / Sub Service">
+      <created>1647882579498</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1647882579498</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Done: Main / Sub Service">
+      <created>1647882649870</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1647882649870</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Done: Update Customer" />
+    <MESSAGE value="Done: Fix Edit User Bug" />
+    <MESSAGE value="Done: /me" />
+    <MESSAGE value="Done: Main / Sub Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Main / Sub Service" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

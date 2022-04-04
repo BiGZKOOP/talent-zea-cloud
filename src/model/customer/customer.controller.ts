@@ -55,28 +55,66 @@ export class CustomerController {
     } else {
       const customerModel: CreateCustomerDto = validation.value;
       try {
-        const customer = await this.customerService.create(customerModel);
-        if (customer && file) {
-          const image = await this.customerService.addImage(
-            customer._id,
-            file.buffer,
-            file.originalname,
-          );
-          if (image) {
-            response.status(201).send({
-              statusCode: HttpStatus.OK,
-              message: 'Customer created successfully',
-              image,
-              customer,
-            });
+        if (createCustomerDto.referralID){
+          const customerDetails={
+            name: createCustomerDto.name,
+            address: createCustomerDto.address,
+            nicNumber: createCustomerDto.nicNumber,
+            email: createCustomerDto.email,
+            countryCode: createCustomerDto.countryCode,
+            phoneNumber: createCustomerDto.phoneNumber,
+            dob: createCustomerDto.dob,
+            userType: "refUser",
+            referralID: createCustomerDto.referralID,
           }
-        } else {
-          if (customer) {
-            response.status(201).send({
-              statusCode: HttpStatus.OK,
-              message: 'Customer created successfully',
-              customer,
-            });
+          const customer = await this.customerService.create(customerDetails);
+          if (customer && file) {
+            const image = await this.customerService.addImage(
+              customer._id,
+              file.buffer,
+              file.originalname,
+            );
+            if (image) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                image,
+                customer,
+              });
+            }
+          } else {
+            if (customer) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                customer,
+              });
+            }
+          }
+        }else {
+          const customer = await this.customerService.create(customerModel);
+          if (customer && file) {
+            const image = await this.customerService.addImage(
+              customer._id,
+              file.buffer,
+              file.originalname,
+            );
+            if (image) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                image,
+                customer,
+              });
+            }
+          } else {
+            if (customer) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                customer,
+              });
+            }
           }
         }
       } catch (error) {

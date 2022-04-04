@@ -48,19 +48,19 @@ export class CustomerService {
     try {
       try {
         if (createCustomerDto.userType === 'refUser') {
-          const newUer = await this.getById(createCustomerDto.referralID);
-          if (newUer) {
+          const checkMainUser = await this.getById(createCustomerDto.referralID);
+          if (checkMainUser) {
             const createCustomer = new this.customerModel({
               ...createCustomerDto,
               referralCount: 0,
             });
             const customer = await createCustomer.save();
             if (customer) {
-              const refCount = newUer.referralCount++;
+              const refCount = checkMainUser.referralCount++;
               const updateNewUser = await this.customerModel.findByIdAndUpdate(
                 createCustomerDto.referralID,
                 {
-                  ...newUer,
+                  ...checkMainUser,
                   referralCount: refCount,
                 },
               );

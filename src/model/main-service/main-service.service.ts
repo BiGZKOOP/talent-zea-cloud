@@ -8,6 +8,7 @@ import {
 } from './entities/main-service.schema';
 import { Model } from 'mongoose';
 import { FileServiceService } from '../file-service/file-service.service';
+import { SubServiceService } from "../sub-service/sub-service.service";
 
 @Injectable()
 export class MainServiceService {
@@ -15,6 +16,7 @@ export class MainServiceService {
     @InjectModel(MainService.name)
     private readonly mainServiceModel: Model<MainServiceDocument>,
     private readonly fileUploadService: FileServiceService,
+    private readonly subService: SubServiceService
   ) {}
 
   async create(
@@ -47,7 +49,7 @@ export class MainServiceService {
       if (item) {
         const serviceId = item._id;
         const data = {
-          subTopic: item.mainTopicDescription,
+          mainTopicDescription: item.mainTopicDescription,
           mainTopic: item.mainTopic,
           image: {
             image1: image.url,
@@ -72,7 +74,7 @@ export class MainServiceService {
       if (item) {
         const serviceId = item._id;
         const data = {
-          subTopic: item.mainTopicDescription,
+          mainTopicDescription: item.mainTopicDescription,
           mainTopic: item.mainTopic,
           image: {
             image1: item.image.image1 ? item.image.image1 : '',
@@ -98,7 +100,7 @@ export class MainServiceService {
       if (item) {
         const serviceId = item._id;
         const data = {
-          subTopic: item.mainTopicDescription,
+          mainTopicDescription: item.mainTopicDescription,
           mainTopic: item.mainTopic,
           image: {
             image1: item.image.image1 ? item.image.image1 : '',
@@ -136,6 +138,24 @@ export class MainServiceService {
         throw new NotFoundException();
       }
       return singleService;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+
+  async findOneMainServiceWithSubService(id: string) {
+    try {
+      const requestMainService = await this.mainServiceModel.findById(id);
+      if (!requestMainService) {
+        throw new NotFoundException();
+      }else {
+        const subMainService= await this.subService.getSubMainService(id);
+        if (!subMainService){
+          throw new NotFoundException();
+        }
+        return { requestMainService,subMainService };
+      }
     } catch (error) {
       console.log(error);
       throw error;

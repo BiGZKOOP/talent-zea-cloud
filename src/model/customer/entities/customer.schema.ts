@@ -40,6 +40,12 @@ export class Customer {
   @Type(() => FileService)
   @Prop({ required: false })
   image?: string;
+  @Prop()
+  userType: string;
+  @Prop()
+  referralID?: string;
+  @Prop()
+  referralCount: number;
 }
 
 export const CustomerSchema = SchemaFactory.createForClass(Customer);

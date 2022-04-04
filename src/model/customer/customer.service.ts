@@ -33,7 +33,6 @@ export class CustomerService {
   }
 
   async findByUserName(name: string): Promise<Customer> {
-    console.log(name);
     const user = await this.customerModel.findOne({ name });
     console.log(user);
     if (user) {
@@ -47,13 +46,46 @@ export class CustomerService {
 
   async create(createCustomerDto: CreateCustomerDto): Promise<Customer> {
     try {
-      const createCustomer = new this.customerModel(createCustomerDto);
-      const customer = await createCustomer.save();
-      if (customer) {
-        return customer;
+      try {
+        if (createCustomerDto.userType === 'refUser') {
+          const newUer = await this.getById(createCustomerDto.referralID);
+          if (newUer) {
+            const createCustomer = new this.customerModel({
+              ...createCustomerDto,
+              referralCount: 0,
+            });
+            const customer = await createCustomer.save();
+            if (customer) {
+              const refCount = newUer.referralCount++;
+              const updateNewUser = await this.customerModel.findByIdAndUpdate(
+                createCustomerDto.referralID,
+                {
+                  ...newUer,
+                  referralCount: refCount,
+                },
+              );
+              if (updateNewUser) {
+                return customer;
+              }
+            }
+          }
+        } else {
+          const createCustomer = new this.customerModel({
+            ...createCustomerDto,
+            referralCount: 0,
+          });
+          const customer = await createCustomer.save();
+          if (customer) {
+            return customer;
+          }
+        }
+      } catch (error) {
+        if (error?.code === 11000) {
+          throw new HttpException('11000', HttpStatus.BAD_REQUEST);
+        }
+        throw new HttpException('2005', HttpStatus.NOT_FOUND);
       }
     } catch (error) {
-      console.log(error);
       throw error;
     }
   }

@@ -46,6 +46,8 @@ export class CustomerController {
       countryCode: Joi.string().required(),
       phoneNumber: Joi.string().required(),
       dob: Joi.string().required(),
+      userType: Joi.string(),
+      referralID: Joi.string(),
     });
     const validation = schema.validate(createCustomerDto);
     if (validation.error) {
@@ -78,8 +80,19 @@ export class CustomerController {
           }
         }
       } catch (error) {
-        console.log(error);
         if (error?.code === 11000) {
+          throw new HttpException(
+            'User with that email already exists',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+        if (error?.response === '2005') {
+          throw new HttpException(
+            'User with that Referral ID does not valid',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+        if (error?.response === '11000') {
           throw new HttpException(
             'User with that email already exists',
             HttpStatus.BAD_REQUEST,

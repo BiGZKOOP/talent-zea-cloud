@@ -51,4 +51,8 @@ export class CreateCustomerDto {
   @IsString()
   @IsNotEmpty()
   dob: string;
+  @IsNotEmpty()
+  userType: string;
+  @IsNotEmpty()
+  referralID?: string;
 }

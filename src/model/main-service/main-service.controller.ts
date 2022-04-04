@@ -121,7 +121,7 @@ export class MainServiceController {
   @Get(':id')
   async findOne(@Param('id') id: string, @Res() response: Response) {
     try {
-      const singleData = await this.mainServiceService.findOne(id);
+      const singleData = await this.mainServiceService.findOneMainServiceWithSubService(id);
       if (singleData) {
         response.status(201).send({
           statusCode: HttpStatus.OK,
@@ -247,3 +247,4 @@ export class MainServiceController {
     }
   }
 }
+

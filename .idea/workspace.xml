@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Main / Sub Service">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/main-service/dto/create-main-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/dto/create-main-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/main-service/dto/update-main-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/dto/update-main-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service-image.schema.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\node_modules\eslint" />
@@ -116,7 +118,11 @@
       <workItem from="1647765925956" duration="12372000" />
       <workItem from="1647882314478" duration="901000" />
       <workItem from="1647926479130" duration="2996000" />
-      <workItem from="1647941714790" duration="8657000" />
+      <workItem from="1647941714790" duration="14900000" />
+      <workItem from="1648026211116" duration="8044000" />
+      <workItem from="1648358924197" duration="1990000" />
+      <workItem from="1649061436910" duration="1870000" />
+      <workItem from="1649085493935" duration="4494000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -195,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647882649870</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Done: Main / Sub Service">
+      <created>1647952884022</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1647952884022</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +224,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

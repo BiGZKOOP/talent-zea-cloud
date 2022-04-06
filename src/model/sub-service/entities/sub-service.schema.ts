@@ -21,6 +21,8 @@ export class SubService {
   @Prop()
   subTopic: string;
   @Prop()
+  price: string;
+  @Prop()
   description: string;
   @Prop({ type: mongoose.Schema.Types.String, ref: MainService.name })
   @Type(() => MainService)

@@ -46,6 +46,8 @@ export class CustomerController {
       countryCode: Joi.string().required(),
       phoneNumber: Joi.string().required(),
       dob: Joi.string().required(),
+      userType: Joi.string(),
+      referralID: Joi.string(),
     });
     const validation = schema.validate(createCustomerDto);
     if (validation.error) {
@@ -53,33 +55,82 @@ export class CustomerController {
     } else {
       const customerModel: CreateCustomerDto = validation.value;
       try {
-        const customer = await this.customerService.create(customerModel);
-        if (customer && file) {
-          const image = await this.customerService.addImage(
-            customer._id,
-            file.buffer,
-            file.originalname,
-          );
-          if (image) {
-            response.status(201).send({
-              statusCode: HttpStatus.OK,
-              message: 'Customer created successfully',
-              image,
-              customer,
-            });
+        if (createCustomerDto.referralID){
+          const customerDetails={
+            name: createCustomerDto.name,
+            address: createCustomerDto.address,
+            nicNumber: createCustomerDto.nicNumber,
+            email: createCustomerDto.email,
+            countryCode: createCustomerDto.countryCode,
+            phoneNumber: createCustomerDto.phoneNumber,
+            dob: createCustomerDto.dob,
+            userType: "refUser",
+            referralID: createCustomerDto.referralID,
           }
-        } else {
-          if (customer) {
-            response.status(201).send({
-              statusCode: HttpStatus.OK,
-              message: 'Customer created successfully',
-              customer,
-            });
+          const customer = await this.customerService.create(customerDetails);
+          if (customer && file) {
+            const image = await this.customerService.addImage(
+              customer._id,
+              file.buffer,
+              file.originalname,
+            );
+            if (image) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                image,
+                customer,
+              });
+            }
+          } else {
+            if (customer) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                customer,
+              });
+            }
+          }
+        }else {
+          const customer = await this.customerService.create(customerModel);
+          if (customer && file) {
+            const image = await this.customerService.addImage(
+              customer._id,
+              file.buffer,
+              file.originalname,
+            );
+            if (image) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                image,
+                customer,
+              });
+            }
+          } else {
+            if (customer) {
+              response.status(201).send({
+                statusCode: HttpStatus.OK,
+                message: 'Customer created successfully',
+                customer,
+              });
+            }
           }
         }
       } catch (error) {
-        console.log(error);
         if (error?.code === 11000) {
+          throw new HttpException(
+            'User with that email already exists',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+        if (error?.response === '2005') {
+          throw new HttpException(
+            'User with that Referral ID does not valid',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+        if (error?.response === '11000') {
           throw new HttpException(
             'User with that email already exists',
             HttpStatus.BAD_REQUEST,

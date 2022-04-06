@@ -15,6 +15,9 @@ export class UpdateSubServiceDto extends PartialType(CreateSubServiceDto) {
   description: string;
   @IsString()
   @IsNotEmpty()
+  price: string;
+  @IsString()
+  @IsNotEmpty()
   mainService: MainService;
   image: {
     image1: string;

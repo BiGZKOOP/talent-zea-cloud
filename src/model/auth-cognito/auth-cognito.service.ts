@@ -5,16 +5,12 @@ import {
   CognitoUserPool,
   CognitoUserAttribute,
 } from 'amazon-cognito-identity-js';
-import { ConfigService } from "@nestjs/config";
-
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class AuthCognitoService {
   private readonly userPool: CognitoUserPool;
-  private sessionUserAttributes: {};
-  constructor(
-    private readonly configService: ConfigService,
-  ) {
+  constructor(private readonly configService: ConfigService) {
     this.userPool = new CognitoUserPool({
       UserPoolId: configService.get('COGNITO_USER_POOL_ID'),
       ClientId: configService.get('COGNITO_CLIENT_ID'),
@@ -60,14 +56,13 @@ export class AuthCognitoService {
 
     return new Promise((resolve, reject) => {
       return newUser.authenticateUser(authenticationDetails, {
-        onSuccess: result => {
+        onSuccess: (result) => {
           resolve(result);
         },
-        onFailure: err => {
+        onFailure: (err) => {
           reject(err);
         },
       });
     });
   }
-
 }

@@ -65,37 +65,37 @@ export class AuthenticationController {
   //   }
   // }
 
-  @HttpCode(200)
-  @UseGuards(LocalAuthenticationGuard)
-  @Post('log-in')
-  async logIn(@Req() request: RequestWithCustomer) {
-    console.log(request);
-    const { user } = request;
-    const accessTokenCookie =
-      this.authenticationService.getCookieWithJwtAccessToken(user._id);
-    const { cookie: refreshTokenCookie, token: refreshToken } =
-      this.authenticationService.getCookieWithJwtRefreshToken(user._id);
-
-    console.log(accessTokenCookie);
-
-    await this.customerService.setCurrentRefreshToken(refreshToken, user._id);
-
-    request.res.setHeader('Set-Cookie', [
-      accessTokenCookie,
-      refreshTokenCookie,
-    ]);
-    return user;
-  }
-
-  @UseGuards(JwtAuthenticationGuard)
-  @Post('log-out')
-  async logOut(@Req() request: RequestWithCustomer) {
-    await this.customerService.removeRefreshToken(request.user._id);
-    request.res.setHeader(
-      'Set-Cookie',
-      this.authenticationService.getCookiesForLogOut(),
-    );
-  }
+  // @HttpCode(200)
+  // @UseGuards(LocalAuthenticationGuard)
+  // @Post('log-in')
+  // async logIn(@Req() request: RequestWithCustomer) {
+  //   console.log(request);
+  //   const { user } = request;
+  //   const accessTokenCookie =
+  //     this.authenticationService.getCookieWithJwtAccessToken(user._id);
+  //   const { cookie: refreshTokenCookie, token: refreshToken } =
+  //     this.authenticationService.getCookieWithJwtRefreshToken(user._id);
+  //
+  //   console.log(accessTokenCookie);
+  //
+  //   await this.customerService.setCurrentRefreshToken(refreshToken, user._id);
+  //
+  //   request.res.setHeader('Set-Cookie', [
+  //     accessTokenCookie,
+  //     refreshTokenCookie,
+  //   ]);
+  //   return user;
+  // }
+  //
+  // @UseGuards(JwtAuthenticationGuard)
+  // @Post('log-out')
+  // async logOut(@Req() request: RequestWithCustomer) {
+  //   await this.customerService.removeRefreshToken(request.user._id);
+  //   request.res.setHeader(
+  //     'Set-Cookie',
+  //     this.authenticationService.getCookiesForLogOut(),
+  //   );
+  // }
 
   //For Cognito Thing
   // @UseGuards(JwtAuthenticationGuard)
@@ -106,13 +106,13 @@ export class AuthenticationController {
   //   return customer;
   // }
 
-  @UseGuards(JwtRefreshGuard)
-  @Get('refresh')
-  refresh(@Req() request: RequestWithCustomer) {
-    const accessTokenCookie =
-      this.authenticationService.getCookieWithJwtAccessToken(request.user._id);
-
-    request.res.setHeader('Set-Cookie', accessTokenCookie);
-    return request.user;
-  }
+  // @UseGuards(JwtRefreshGuard)
+  // @Get('refresh')
+  // refresh(@Req() request: RequestWithCustomer) {
+  //   const accessTokenCookie =
+  //     this.authenticationService.getCookieWithJwtAccessToken(request.user._id);
+  //
+  //   request.res.setHeader('Set-Cookie', accessTokenCookie);
+  //   return request.user;
+  // }
 }

@@ -4,10 +4,10 @@ import { IsNotEmpty, IsString } from 'class-validator';
 
 export class UpdateMainServiceDto extends PartialType(CreateMainServiceDto) {
   @IsString()
-  @IsNotEmpty()
+  // @IsNotEmpty()
   mainTopic: string;
   @IsString()
-  @IsNotEmpty()
+  // @IsNotEmpty()
   mainTopicDescription: string;
   image: {
     image1: string;

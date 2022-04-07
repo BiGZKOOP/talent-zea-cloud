@@ -10,6 +10,7 @@ import {
   HttpStatus,
   UseInterceptors,
   UploadedFiles,
+  UseGuards,
 } from '@nestjs/common';
 import { MainServiceService } from './main-service.service';
 import { CreateMainServiceDto } from './dto/create-main-service.dto';
@@ -17,12 +18,14 @@ import { UpdateMainServiceDto } from './dto/update-main-service.dto';
 import { Response } from 'express';
 import * as Joi from '@hapi/joi';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('main-service')
 export class MainServiceController {
   constructor(private readonly mainServiceService: MainServiceService) {}
 
   @Post()
+  @UseGuards(AuthGuard('jwt'))
   @UseInterceptors(
     FileFieldsInterceptor([
       { name: 'image1', maxCount: 1 },
@@ -121,7 +124,8 @@ export class MainServiceController {
   @Get(':id')
   async findOne(@Param('id') id: string, @Res() response: Response) {
     try {
-      const singleData = await this.mainServiceService.findOneMainServiceWithSubService(id);
+      const singleData =
+        await this.mainServiceService.findOneMainServiceWithSubService(id);
       if (singleData) {
         response.status(201).send({
           statusCode: HttpStatus.OK,
@@ -136,6 +140,7 @@ export class MainServiceController {
   }
 
   @Patch(':id')
+  @UseGuards(AuthGuard('jwt'))
   @UseInterceptors(
     FileFieldsInterceptor([
       { name: 'image1', maxCount: 1 },
@@ -155,8 +160,8 @@ export class MainServiceController {
     },
   ) {
     const schema = Joi.object({
-      mainTopic: Joi.string().required(),
-      mainTopicDescription: Joi.string().required(),
+      mainTopic: Joi.string(),
+      mainTopicDescription: Joi.string(),
     });
     const validation = schema.validate(updateMainServiceDto);
     if (validation.error) {
@@ -171,7 +176,7 @@ export class MainServiceController {
           );
           if (updateService && files) {
             let image;
-            if (files.image1[0]) {
+            if (files.image1 && files.image1[0]) {
               image = await this.mainServiceService.addServiceImage(
                 updateService._id,
                 files.image1[0].buffer,
@@ -179,7 +184,7 @@ export class MainServiceController {
                 files.image1[0].fieldname,
               );
             }
-            if (files.image2[0]) {
+            if (files.image2 && files.image2[0]) {
               image = await this.mainServiceService.addServiceImage(
                 updateService._id,
                 files.image2[0].buffer,
@@ -187,7 +192,7 @@ export class MainServiceController {
                 files.image2[0].fieldname,
               );
             }
-            if (files.image3[0]) {
+            if (files.image3 && files.image3[0]) {
               image = await this.mainServiceService.addServiceImage(
                 updateService._id,
                 files.image3[0].buffer,
@@ -231,6 +236,7 @@ export class MainServiceController {
   }
 
   @Delete(':id')
+  @UseGuards(AuthGuard('jwt'))
   async remove(@Param('id') id: string, @Res() response: Response) {
     try {
       const isDelete = await this.mainServiceService.remove(id);
@@ -247,4 +253,3 @@ export class MainServiceController {
     }
   }
 }
-

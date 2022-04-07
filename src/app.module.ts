@@ -3,11 +3,10 @@ import { ConfigModule } from '@nestjs/config';
 import * as Joi from '@hapi/joi';
 import { CustomerModule } from './model/customer/customer.module';
 import { DatabaseModule } from './db/database.module';
-import { AuthenticationModule } from './model/authentication/authentication.module';
 import { FileServiceModule } from './model/file-service/file-service.module';
 import { MainServiceModule } from './model/main-service/main-service.module';
 import { SubServiceModule } from './model/sub-service/sub-service.module';
-import { AuthCognitoModule } from "./model/auth-cognito/auth-cognito.module";
+import { AuthCognitoModule } from './model/auth-cognito/auth-cognito.module';
 
 @Module({
   imports: [
@@ -26,18 +25,17 @@ import { AuthCognitoModule } from "./model/auth-cognito/auth-cognito.module";
         AWS_SECRET_ACCESS_KEY: Joi.string().required(),
         PORT: Joi.number(),
         AWS_PUBLIC_BUCKET_NAME: Joi.string().required(),
-        COGNITO_USER_POOL_ID:  Joi.string().required(),
-        COGNITO_CLIENT_ID:  Joi.string().required(),
+        COGNITO_USER_POOL_ID: Joi.string().required(),
+        COGNITO_CLIENT_ID: Joi.string().required(),
         COGNITO_REGION: Joi.string().required(),
       }),
     }),
     DatabaseModule,
     CustomerModule,
-    AuthenticationModule,
     FileServiceModule,
     MainServiceModule,
     SubServiceModule,
-    AuthCognitoModule
+    AuthCognitoModule,
   ],
   controllers: [],
   providers: [],

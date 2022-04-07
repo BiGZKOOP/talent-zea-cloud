@@ -10,6 +10,7 @@ import {
   HttpStatus,
   UseInterceptors,
   UploadedFiles,
+  UseGuards,
 } from '@nestjs/common';
 import { SubServiceService } from './sub-service.service';
 import { CreateSubServiceDto } from './dto/create-sub-service.dto';
@@ -17,6 +18,7 @@ import { UpdateSubServiceDto } from './dto/update-sub-service.dto';
 import { Response } from 'express';
 import * as Joi from '@hapi/joi';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('sub-service')
 export class SubServiceController {

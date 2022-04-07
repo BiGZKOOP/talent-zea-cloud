@@ -2,25 +2,22 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable } from '@nestjs/common';
 import { passportJwtSecret } from 'jwks-rsa';
-import { ConfigService } from "@nestjs/config";
-
+import { AuthConfig } from './auth.config';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
-  constructor(
-    private readonly configService: ConfigService,
-  ) {
+  constructor(private authConfig: AuthConfig) {
     super({
       secretOrKeyProvider: passportJwtSecret({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        jwksUri: `https://cognito-idp.${configService.get("COGNITO_REGION")}.amazonaws.com/${configService.get("COGNITO_USER_POOL_ID")}/.well-known/jwks.json`,
+        jwksUri: `${authConfig.authority}/.well-known/jwks.json`,
       }),
 
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      audience: configService.get('COGNITO_USER_POOL_ID'),
-      issuer:`https://cognito-idp.${configService.get("COGNITO_REGION")}.amazonaws.com/${configService.get("COGNITO_USER_POOL_ID")}`,
+      audience: authConfig.clientId,
+      issuer: authConfig.authority,
       algorithms: ['RS256'],
     });
   }

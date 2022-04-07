@@ -11,6 +11,7 @@ import {
   Query,
   Res,
   UploadedFile,
+  UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
@@ -22,6 +23,7 @@ import MongooseClassSerializerInterceptor from '../../config/mongooseClassSerial
 import { CustomerSchema } from './entities/customer.schema';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { PaginationParams } from '../../helpers/PaginationParams';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('customer')
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -31,6 +33,7 @@ export class CustomerController {
   constructor(private readonly customerService: CustomerService) {}
 
   @Post()
+  @UseGuards(AuthGuard('jwt'))
   @UseInterceptors(FileInterceptor('image'))
   async createCustomer(
     @Body() createCustomerDto: CreateCustomerDto,
@@ -55,8 +58,8 @@ export class CustomerController {
     } else {
       const customerModel: CreateCustomerDto = validation.value;
       try {
-        if (createCustomerDto.referralID){
-          const customerDetails={
+        if (createCustomerDto.referralID) {
+          const customerDetails = {
             name: createCustomerDto.name,
             address: createCustomerDto.address,
             nicNumber: createCustomerDto.nicNumber,
@@ -64,9 +67,9 @@ export class CustomerController {
             countryCode: createCustomerDto.countryCode,
             phoneNumber: createCustomerDto.phoneNumber,
             dob: createCustomerDto.dob,
-            userType: "refUser",
+            userType: 'refUser',
             referralID: createCustomerDto.referralID,
-          }
+          };
           const customer = await this.customerService.create(customerDetails);
           if (customer && file) {
             const image = await this.customerService.addImage(
@@ -91,7 +94,7 @@ export class CustomerController {
               });
             }
           }
-        }else {
+        } else {
           const customer = await this.customerService.create(customerModel);
           if (customer && file) {
             const image = await this.customerService.addImage(
@@ -145,6 +148,7 @@ export class CustomerController {
   }
 
   @Patch('update/:id')
+  @UseGuards(AuthGuard('jwt'))
   @UseInterceptors(FileInterceptor('image'))
   async update(
     @Param('id') id: string,
@@ -204,13 +208,14 @@ export class CustomerController {
   }
 
   @Get(':me')
+  @UseGuards(AuthGuard('jwt'))
   async getCurrentUser(@Res() response: Response, @Param('me') me: string) {
     try {
       const data = await this.customerService.getByEmail(me);
       if (data) {
         response.status(201).send({
           statusCode: HttpStatus.OK,
-          message: 'Customer Is in-the DB',
+          message: 'Customer Found',
           data,
         });
       }
@@ -224,15 +229,18 @@ export class CustomerController {
   }
 
   @Get()
+  @UseGuards(AuthGuard('jwt'))
   async getAllCustomer(@Query() { skip, limit }: PaginationParams) {
     return this.customerService.findAll(skip, limit);
   }
   @Get(':id')
+  @UseGuards(AuthGuard('jwt'))
   findOne(@Param('id') id: string) {
     return this.customerService.findOne(+id);
   }
 
   @Delete(':id')
+  @UseGuards(AuthGuard('jwt'))
   remove(@Param('id') id: string) {
     return this.customerService.remove(+id);
   }

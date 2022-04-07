@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service" />
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service">
+      <change afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/jwt.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/authentication/authentication.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/authentication/authentication.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +122,9 @@
       <workItem from="1648358924197" duration="1990000" />
       <workItem from="1649061436910" duration="1870000" />
       <workItem from="1649085493935" duration="8334000" />
-      <workItem from="1649260340763" duration="6183000" />
+      <workItem from="1649260340763" duration="6756000" />
+      <workItem from="1649274762368" duration="679000" />
+      <workItem from="1649302558904" duration="4657000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -218,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649267588297</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service">
+      <created>1649273141665</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1649273141665</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +254,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

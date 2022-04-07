@@ -4,20 +4,20 @@ import { IsNotEmpty, IsString } from 'class-validator';
 import { MainService } from '../../main-service/entities/main-service.schema';
 
 export class UpdateSubServiceDto extends PartialType(CreateSubServiceDto) {
-  @IsString()
-  @IsNotEmpty()
+  // @IsString()
+  // @IsNotEmpty()
   mainTopic: string;
-  @IsString()
-  @IsNotEmpty()
+  // @IsString()
+  // @IsNotEmpty()
   subTopic: string;
-  @IsString()
-  @IsNotEmpty()
+  // @IsString()
+  // @IsNotEmpty()
   description: string;
-  @IsString()
-  @IsNotEmpty()
+  // @IsString()
+  // @IsNotEmpty()
   price: string;
-  @IsString()
-  @IsNotEmpty()
+  // @IsString()
+  // @IsNotEmpty()
   mainService: MainService;
   image: {
     image1: string;

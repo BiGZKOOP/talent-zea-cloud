@@ -75,7 +75,7 @@ export class SubServiceService {
           faq: item.faq,
           mainTopic: item.mainTopic,
           image: {
-            image1: item.image.image1 ? item.image.image1 : '',
+            image1: item.image.image1 ? item.image.image1 : undefined,
             image2: image.url,
           },
         };
@@ -104,8 +104,8 @@ export class SubServiceService {
           faq: item.faq,
           mainTopic: item.mainTopic,
           image: {
-            image1: item.image.image1 ? item.image.image1 : '',
-            image2: item.image.image2 ? item.image.image2 : '',
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
             image3: image.url,
           },
         };
@@ -153,9 +153,10 @@ export class SubServiceService {
     }
   }
   async update(id: string, updateSubServiceDto: UpdateSubServiceDto) {
-    const updateSubService = await this.subServiceModel
-      .findByIdAndUpdate(id, { ...updateSubServiceDto })
-      .setOptions({ overwrite: true, new: true });
+    const updateSubService = await this.subServiceModel.findByIdAndUpdate(id, {
+      ...updateSubServiceDto,
+    });
+    // .setOptions({ overwrite: true, new: true });
     if (!updateSubService) {
       throw new NotFoundException();
     }

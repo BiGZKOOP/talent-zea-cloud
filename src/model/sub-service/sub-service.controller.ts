@@ -25,6 +25,7 @@ export class SubServiceController {
   constructor(private readonly subServiceService: SubServiceService) {}
 
   @Post()
+  @UseGuards(AuthGuard('jwt'))
   @UseInterceptors(
     FileFieldsInterceptor([
       { name: 'image1', maxCount: 1 },
@@ -123,6 +124,7 @@ export class SubServiceController {
   }
 
   @Patch(':id')
+  @UseGuards(AuthGuard('jwt'))
   @UseInterceptors(
     FileFieldsInterceptor([
       { name: 'image1', maxCount: 1 },
@@ -142,11 +144,11 @@ export class SubServiceController {
     },
   ) {
     const schema = Joi.object({
-      mainTopic: Joi.string().required(),
-      subTopic: Joi.string().required(),
-      description: Joi.string().required(),
-      faq: Joi.array().items(Joi.object()).required(),
-      price: Joi.string().required(),
+      mainTopic: Joi.string(),
+      subTopic: Joi.string(),
+      description: Joi.string(),
+      faq: Joi.array().items(Joi.object()),
+      price: Joi.string(),
     });
     const validation = schema.validate(updateSubServiceDto);
     if (!validation.error) {
@@ -161,7 +163,7 @@ export class SubServiceController {
           );
           if (updateService && files) {
             let image;
-            if (files.image1[0]) {
+            if (files.image1 && files.image1[0]) {
               image = await this.subServiceService.addServiceImage(
                 updateService._id,
                 files.image1[0].buffer,
@@ -169,7 +171,7 @@ export class SubServiceController {
                 files.image1[0].fieldname,
               );
             }
-            if (files.image2[0]) {
+            if (files.image2 && files.image2[0]) {
               image = await this.subServiceService.addServiceImage(
                 updateService._id,
                 files.image2[0].buffer,
@@ -177,7 +179,7 @@ export class SubServiceController {
                 files.image2[0].fieldname,
               );
             }
-            if (files.image3[0]) {
+            if (files.image3 && files.image3[0]) {
               image = await this.subServiceService.addServiceImage(
                 updateService._id,
                 files.image3[0].buffer,
@@ -221,6 +223,7 @@ export class SubServiceController {
   }
 
   @Delete(':id')
+  @UseGuards(AuthGuard('jwt'))
   remove(@Param('id') id: string) {
     return this.subServiceService.remove(+id);
   }

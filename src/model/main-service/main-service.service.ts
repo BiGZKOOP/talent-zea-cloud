@@ -8,7 +8,7 @@ import {
 } from './entities/main-service.schema';
 import { Model } from 'mongoose';
 import { FileServiceService } from '../file-service/file-service.service';
-import { SubServiceService } from "../sub-service/sub-service.service";
+import { SubServiceService } from '../sub-service/sub-service.service';
 
 @Injectable()
 export class MainServiceService {
@@ -16,7 +16,7 @@ export class MainServiceService {
     @InjectModel(MainService.name)
     private readonly mainServiceModel: Model<MainServiceDocument>,
     private readonly fileUploadService: FileServiceService,
-    private readonly subService: SubServiceService
+    private readonly subService: SubServiceService,
   ) {}
 
   async create(
@@ -77,7 +77,7 @@ export class MainServiceService {
           mainTopicDescription: item.mainTopicDescription,
           mainTopic: item.mainTopic,
           image: {
-            image1: item.image.image1 ? item.image.image1 : '',
+            image1: item.image.image1 ? item.image.image1 : undefined,
             image2: image.url,
           },
         };
@@ -103,8 +103,8 @@ export class MainServiceService {
           mainTopicDescription: item.mainTopicDescription,
           mainTopic: item.mainTopic,
           image: {
-            image1: item.image.image1 ? item.image.image1 : '',
-            image2: item.image.image2 ? item.image.image2 : '',
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
             image3: image.url,
           },
         };
@@ -149,12 +149,12 @@ export class MainServiceService {
       const requestMainService = await this.mainServiceModel.findById(id);
       if (!requestMainService) {
         throw new NotFoundException();
-      }else {
-        const subMainService= await this.subService.getSubMainService(id);
-        if (!subMainService){
+      } else {
+        const subMainService = await this.subService.getSubMainService(id);
+        if (!subMainService) {
           throw new NotFoundException();
         }
-        return { requestMainService,subMainService };
+        return { requestMainService, subMainService };
       }
     } catch (error) {
       console.log(error);
@@ -163,9 +163,10 @@ export class MainServiceService {
   }
 
   async update(id: string, updateMainServiceDto: UpdateMainServiceDto) {
-    const updateMService = await this.mainServiceModel
-      .findByIdAndUpdate(id, { ...updateMainServiceDto })
-      .setOptions({ overwrite: true, new: true });
+    const updateMService = await this.mainServiceModel.findByIdAndUpdate(id, {
+      ...updateMainServiceDto,
+    });
+    // .setOptions({ overwrite: true, new: true });
     if (!updateMService) {
       throw new NotFoundException();
     }

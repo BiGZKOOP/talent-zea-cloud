@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Add Guards for privet routers">
       <change afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
@@ -124,7 +124,7 @@
       <workItem from="1649085493935" duration="8334000" />
       <workItem from="1649260340763" duration="6756000" />
       <workItem from="1649274762368" duration="679000" />
-      <workItem from="1649302558904" duration="4657000" />
+      <workItem from="1649302558904" duration="5048000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -264,7 +264,8 @@
     <MESSAGE value="Done: Main / Sub Service" />
     <MESSAGE value="Fixed: Referral UserBug" />
     <MESSAGE value="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service" />
+    <MESSAGE value="Done: Add Guards for privet routers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Add Guards for privet routers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

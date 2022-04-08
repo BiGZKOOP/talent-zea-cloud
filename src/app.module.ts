@@ -7,6 +7,7 @@ import { FileServiceModule } from './model/file-service/file-service.module';
 import { MainServiceModule } from './model/main-service/main-service.module';
 import { SubServiceModule } from './model/sub-service/sub-service.module';
 import { AuthCognitoModule } from './model/auth-cognito/auth-cognito.module';
+import { StripeModule } from './model/stripe/stripe.module';
 
 @Module({
   imports: [
@@ -28,6 +29,9 @@ import { AuthCognitoModule } from './model/auth-cognito/auth-cognito.module';
         COGNITO_USER_POOL_ID: Joi.string().required(),
         COGNITO_CLIENT_ID: Joi.string().required(),
         COGNITO_REGION: Joi.string().required(),
+        STRIPE_SECRET_KEY: Joi.string(),
+        STRIPE_CURRENCY: Joi.string(),
+        FRONTEND_URL: Joi.string(),
       }),
     }),
     DatabaseModule,
@@ -36,6 +40,7 @@ import { AuthCognitoModule } from './model/auth-cognito/auth-cognito.module';
     MainServiceModule,
     SubServiceModule,
     AuthCognitoModule,
+    StripeModule,
   ],
   controllers: [],
   providers: [],

@@ -10,6 +10,6 @@ import { AuthConfig } from './auth.config';
   imports: [PassportModule.register({ defaultStrategy: 'jwt' }), ConfigModule],
   controllers: [AuthCognitoController],
   providers: [AuthCognitoService, JwtStrategy, AuthConfig],
-  exports: [AuthCognitoModule],
+  exports: [AuthCognitoModule, AuthCognitoService],
 })
 export class AuthCognitoModule {}

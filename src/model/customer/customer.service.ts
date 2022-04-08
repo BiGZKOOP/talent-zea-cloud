@@ -12,6 +12,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Customer, CustomerDocument } from './entities/customer.schema';
 import { RegisterDto } from '../authentication/dto/register.dto';
 import { FileServiceService } from '../file-service/file-service.service';
+import { StripeService } from '../stripe/stripe.service';
 
 @Injectable()
 export class CustomerService {
@@ -19,6 +20,7 @@ export class CustomerService {
     @InjectModel(Customer.name)
     private customerModel: Model<CustomerDocument>,
     private readonly fileUploadService: FileServiceService,
+    private readonly stripeService: StripeService,
   ) {}
 
   async getByEmail(email: string): Promise<Customer> {
@@ -43,47 +45,72 @@ export class CustomerService {
       HttpStatus.NOT_FOUND,
     );
   }
+  async findByUserEmail(email: string): Promise<Customer> {
+    const user = await this.customerModel.findOne({ email });
+    if (user) {
+      return user;
+    }
+    throw new HttpException(
+      'User with this name does not exist',
+      HttpStatus.NOT_FOUND,
+    );
+  }
 
   async create(createCustomerDto: CreateCustomerDto): Promise<Customer> {
     try {
-      try {
-        if (createCustomerDto.userType === 'refUser') {
-          const checkMainUser = await this.getById(createCustomerDto.referralID);
-          if (checkMainUser) {
-            const createCustomer = new this.customerModel({
-              ...createCustomerDto,
-              referralCount: 0,
-            });
-            const customer = await createCustomer.save();
-            if (customer) {
-              const refCount = checkMainUser.referralCount++;
-              const updateNewUser = await this.customerModel.findByIdAndUpdate(
+      const stripeCustomer = await this.stripeService.createCustomer(
+        createCustomerDto.name,
+        createCustomerDto.email,
+      );
+      if (stripeCustomer) {
+        try {
+          try {
+            if (createCustomerDto.userType === 'refUser') {
+              const checkMainUser = await this.getById(
                 createCustomerDto.referralID,
-                {
-                  ...checkMainUser,
-                  referralCount: refCount,
-                },
               );
-              if (updateNewUser) {
+              if (checkMainUser) {
+                const createCustomer = new this.customerModel({
+                  ...createCustomerDto,
+                  referralCount: 0,
+                  stripeCustomerId: stripeCustomer.id,
+                });
+                const customer = await createCustomer.save();
+                if (customer) {
+                  const refCount = checkMainUser.referralCount++;
+                  const updateNewUser =
+                    await this.customerModel.findByIdAndUpdate(
+                      createCustomerDto.referralID,
+                      {
+                        ...checkMainUser,
+                        referralCount: refCount,
+                      },
+                    );
+                  if (updateNewUser) {
+                    return customer;
+                  }
+                }
+              }
+            } else {
+              const createCustomer = new this.customerModel({
+                ...createCustomerDto,
+                referralCount: 0,
+                stripeCustomerId: stripeCustomer.id,
+              });
+              const customer = await createCustomer.save();
+              if (customer) {
                 return customer;
               }
             }
+          } catch (error) {
+            if (error?.code === 11000) {
+              throw new HttpException('11000', HttpStatus.BAD_REQUEST);
+            }
+            throw new HttpException('2005', HttpStatus.NOT_FOUND);
           }
-        } else {
-          const createCustomer = new this.customerModel({
-            ...createCustomerDto,
-            referralCount: 0,
-          });
-          const customer = await createCustomer.save();
-          if (customer) {
-            return customer;
-          }
+        } catch (error) {
+          throw error;
         }
-      } catch (error) {
-        if (error?.code === 11000) {
-          throw new HttpException('11000', HttpStatus.BAD_REQUEST);
-        }
-        throw new HttpException('2005', HttpStatus.NOT_FOUND);
       }
     } catch (error) {
       throw error;

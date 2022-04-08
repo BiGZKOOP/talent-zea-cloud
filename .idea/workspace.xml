@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Sub &amp; Main Service Issue">
+      <change afterPath="$PROJECT_DIR$/src/model/auth-cognito/requestWithCustomer.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/charge.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/dto/create-stripe.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/dto/createCharge.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/dto/update-stripe.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/entities/stripe.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/stripe.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/stripe.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/stripe/stripe.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ReferralUserBug" />
+        <entry key="$PROJECT_DIR$" value="authWithCongnito" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,7 +137,9 @@
       <workItem from="1649274762368" duration="679000" />
       <workItem from="1649302558904" duration="6322000" />
       <workItem from="1649337556133" duration="2777000" />
-      <workItem from="1649350846536" duration="4333000" />
+      <workItem from="1649350846536" duration="9139000" />
+      <workItem from="1649423248457" duration="3420000" />
+      <workItem from="1649437163446" duration="3346000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -252,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649352380667</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fixed: Sub &amp; Main Service Issue">
+      <created>1649399010365</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1649399010366</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

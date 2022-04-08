@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Add Guards for privet routers">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Sub &amp; Main Service Issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/main-service/dto/update-main-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/dto/update-main-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +117,7 @@
       <workItem from="1649274762368" duration="679000" />
       <workItem from="1649302558904" duration="6322000" />
       <workItem from="1649337556133" duration="2777000" />
-      <workItem from="1649350846536" duration="1497000" />
+      <workItem from="1649350846536" duration="4333000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -251,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649307733439</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixed: Sub &amp; Main Service Issue">
+      <created>1649352380667</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1649352380667</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +279,8 @@
     <MESSAGE value="Fixed: Referral UserBug" />
     <MESSAGE value="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service" />
     <MESSAGE value="Done: Add Guards for privet routers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Add Guards for privet routers" />
+    <MESSAGE value="Fixed: Sub &amp; Main Service Issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Sub &amp; Main Service Issue" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

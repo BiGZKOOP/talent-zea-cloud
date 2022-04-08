@@ -24,6 +24,8 @@ export class Customer {
   address: string;
   @Prop()
   nicNumber: string;
+  @Prop()
+  stripeCustomerId: string;
   // @Prop()
   // password: string;
   @Prop({ unique: true })

@@ -1,5 +1,12 @@
-import { BadRequestException, Body, Controller, Post } from "@nestjs/common";
+import {
+  BadRequestException,
+  Body,
+  Controller,
+  Post,
+  Req,
+} from '@nestjs/common';
 import { AuthCognitoService } from './auth-cognito.service';
+import RequestWithCustomer from './requestWithCustomer.interface';
 
 @Controller('auth')
 export class AuthCognitoController {
@@ -14,10 +21,14 @@ export class AuthCognitoController {
   @Post('login')
   async login(@Body() authenticateRequest: { name: string; password: string }) {
     try {
-      return await this.authCognitoService.authenticateUser(authenticateRequest);
+      const login = await this.authCognitoService.authenticateUser(
+        authenticateRequest,
+      );
+      if (login) {
+        return login;
+      }
     } catch (e) {
       throw new BadRequestException(e.message);
     }
   }
-
 }

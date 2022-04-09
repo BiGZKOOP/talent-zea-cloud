@@ -53,13 +53,16 @@ export class MainServiceService {
           mainTopic: item.mainTopic,
           image: {
             image1: image.url,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
           },
         };
         await this.mainServiceModel
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          // .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -79,13 +82,15 @@ export class MainServiceService {
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
             image2: image.url,
+            image3: item.image.image3 ? item.image.image3 : undefined,
           },
         };
         await this.mainServiceModel
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          // .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -112,7 +117,8 @@ export class MainServiceService {
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          // .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -163,13 +169,15 @@ export class MainServiceService {
   }
 
   async update(id: string, updateMainServiceDto: UpdateMainServiceDto) {
-    const updateMService = await this.mainServiceModel.findByIdAndUpdate(id, {
-      ...updateMainServiceDto,
-    });
-    // .setOptions({ overwrite: true, new: true });
+    const updateMService = await this.mainServiceModel
+      .findByIdAndUpdate(id, {
+        ...updateMainServiceDto,
+      })
+      .setOptions({ new: true });
     if (!updateMService) {
       throw new NotFoundException();
     }
+
     return updateMService;
   }
 

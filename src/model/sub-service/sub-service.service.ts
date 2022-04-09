@@ -48,13 +48,15 @@ export class SubServiceService {
           mainTopic: item.mainTopic,
           image: {
             image1: image.url,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
           },
         };
         await this.subServiceModel
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -77,13 +79,14 @@ export class SubServiceService {
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
             image2: image.url,
+            image3: item.image.image3 ? item.image.image3 : undefined,
           },
         };
         await this.subServiceModel
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -113,7 +116,7 @@ export class SubServiceService {
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -153,9 +156,11 @@ export class SubServiceService {
     }
   }
   async update(id: string, updateSubServiceDto: UpdateSubServiceDto) {
-    const updateSubService = await this.subServiceModel.findByIdAndUpdate(id, {
-      ...updateSubServiceDto,
-    });
+    const updateSubService = await this.subServiceModel
+      .findByIdAndUpdate(id, {
+        ...updateSubServiceDto,
+      })
+      .setOptions({ new: true });
     // .setOptions({ overwrite: true, new: true });
     if (!updateSubService) {
       throw new NotFoundException();

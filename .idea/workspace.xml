@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Stripe Integrate">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/auth-cognito.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Customer Update (With Image)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +117,8 @@
       <workItem from="1649337556133" duration="2777000" />
       <workItem from="1649350846536" duration="9139000" />
       <workItem from="1649423248457" duration="3420000" />
-      <workItem from="1649437163446" duration="6821000" />
+      <workItem from="1649437163446" duration="7595000" />
+      <workItem from="1649490335753" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -271,7 +267,28 @@
       <option name="project" value="LOCAL" />
       <updated>1649440776660</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update: Cognito Auth">
+      <created>1649484271102</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1649484271102</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed: Customer Update (With Image)">
+      <created>1649491920806</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1649491920806</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fixed: Customer Update (With Image)">
+      <created>1649492015772</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649492015772</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +317,9 @@
     <MESSAGE value="Done: Add Guards for privet routers" />
     <MESSAGE value="Fixed: Sub &amp; Main Service Issue" />
     <MESSAGE value="Done: Stripe Integrate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Stripe Integrate" />
+    <MESSAGE value="Update: Cognito Auth" />
+    <MESSAGE value="Fixed: Customer Update (With Image)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Customer Update (With Image)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

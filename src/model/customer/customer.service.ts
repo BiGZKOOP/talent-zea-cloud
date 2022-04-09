@@ -126,14 +126,14 @@ export class CustomerService {
     const item = await this.getById(id);
     // console.log('log 3', item);
     const userId = item._id;
-    await this.customerModel.updateOne(
-      { userId },
-      {
-        image: image.url,
-      },
-    );
+    const update = await this.customerModel.findByIdAndUpdate(userId, {
+      image: image.url,
+    });
+    if (update) {
+      return image;
+    }
     // console.log('log 4 ', image);
-    return image;
+    // return image;
   }
 
   async register(registrationData: RegisterDto): Promise<Customer> {

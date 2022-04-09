@@ -63,7 +63,6 @@ export class CustomerController {
 
       try {
         const registerRequest = {
-          name: createCustomerDto.name,
           password: createCustomerDto.password,
           email: createCustomerDto.email,
         };

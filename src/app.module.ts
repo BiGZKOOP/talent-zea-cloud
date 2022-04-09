@@ -32,6 +32,7 @@ import { StripeModule } from './model/stripe/stripe.module';
         STRIPE_SECRET_KEY: Joi.string(),
         STRIPE_CURRENCY: Joi.string(),
         FRONTEND_URL: Joi.string(),
+        FRONTEND_URL_ADMIN: Joi.string(),
       }),
     }),
     DatabaseModule,

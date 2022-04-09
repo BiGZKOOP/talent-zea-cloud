@@ -48,6 +48,8 @@ export class SubServiceService {
           mainTopic: item.mainTopic,
           image: {
             image1: image.url,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
           },
         };
         await this.subServiceModel
@@ -77,6 +79,7 @@ export class SubServiceService {
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
             image2: image.url,
+            image3: item.image.image3 ? item.image.image3 : undefined,
           },
         };
         await this.subServiceModel

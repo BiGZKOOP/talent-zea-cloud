@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Update Customer">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Update Option  and Defined EnableCors For FE &amp; BE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
@@ -22,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="authWithCongnito" />
+        <entry key="$PROJECT_DIR$" value="stripeIntergrate" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -123,7 +122,8 @@
       <workItem from="1649350846536" duration="9139000" />
       <workItem from="1649423248457" duration="3420000" />
       <workItem from="1649437163446" duration="7595000" />
-      <workItem from="1649490335753" duration="4447000" />
+      <workItem from="1649490335753" duration="8248000" />
+      <workItem from="1649512814311" duration="2198000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -321,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649492761160</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fixed: Update Option  and Defined EnableCors For FE &amp; BE">
+      <created>1649495962226</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1649495962226</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +361,8 @@
     <MESSAGE value="Fixed: Customer Update (With Image)" />
     <MESSAGE value="Fixed: enableCors" />
     <MESSAGE value="Fixed: Update Customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Update Customer" />
+    <MESSAGE value="Fixed: Update Option  and Defined EnableCors For FE &amp; BE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Update Option  and Defined EnableCors For FE &amp; BE" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

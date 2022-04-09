@@ -16,15 +16,11 @@ export class AuthCognitoService {
       ClientId: configService.get('COGNITO_CLIENT_ID'),
     });
   }
-  registerUser(registerRequest: {
-    name: string;
-    email: string;
-    password: string;
-  }) {
-    const { name, email, password } = registerRequest;
+  registerUser(registerRequest: { email: string; password: string }) {
+    const { email, password } = registerRequest;
     return new Promise((resolve, reject) => {
       return this.userPool.signUp(
-        name,
+        email,
         password,
 
         [new CognitoUserAttribute({ Name: 'email', Value: email })],
@@ -40,15 +36,15 @@ export class AuthCognitoService {
     });
   }
 
-  authenticateUser(user: { name: string; password: string }) {
-    const { name, password } = user;
+  authenticateUser(user: { email: string; password: string }) {
+    const { email, password } = user;
 
     const authenticationDetails = new AuthenticationDetails({
-      Username: name,
+      Username: email,
       Password: password,
     });
     const userData = {
-      Username: name,
+      Username: email,
       Pool: this.userPool,
     };
 

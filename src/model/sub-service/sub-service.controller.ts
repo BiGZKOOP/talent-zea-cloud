@@ -202,6 +202,7 @@ export class SubServiceController {
           response.status(401).send(error);
         }
       } else {
+        console.log('Test Me');
         try {
           const updateService = await this.subServiceService.update(
             id,

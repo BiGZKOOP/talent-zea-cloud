@@ -133,7 +133,7 @@ export class CustomerService {
       return image;
     }
     // console.log('log 4 ', image);
-    return image;
+    // return image;
   }
 
   async register(registrationData: RegisterDto): Promise<Customer> {

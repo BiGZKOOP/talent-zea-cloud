@@ -210,9 +210,11 @@ export class CustomerService {
   }
 
   async update(id: string, updateCustomerDto: UpdateCustomerDto) {
-    const customerUpdate = await this.customerModel.findByIdAndUpdate(id, {
-      ...updateCustomerDto,
-    });
+    const customerUpdate = await this.customerModel
+      .findByIdAndUpdate(id, {
+        ...updateCustomerDto,
+      })
+      .setOptions({ new: true });
     // .setOptions({ overwrite: true, new: true });
     if (!customerUpdate) {
       throw new NotFoundException();

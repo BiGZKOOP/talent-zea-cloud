@@ -54,7 +54,7 @@ export class SubServiceService {
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -83,7 +83,7 @@ export class SubServiceService {
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -113,7 +113,7 @@ export class SubServiceService {
           .findByIdAndUpdate(serviceId, {
             ...data,
           })
-          .setOptions({ overwrite: true, new: true });
+          .setOptions({ new: true });
         return image;
       } else {
         throw new NotFoundException();
@@ -153,9 +153,11 @@ export class SubServiceService {
     }
   }
   async update(id: string, updateSubServiceDto: UpdateSubServiceDto) {
-    const updateSubService = await this.subServiceModel.findByIdAndUpdate(id, {
-      ...updateSubServiceDto,
-    });
+    const updateSubService = await this.subServiceModel
+      .findByIdAndUpdate(id, {
+        ...updateSubServiceDto,
+      })
+      .setOptions({ new: true });
     // .setOptions({ overwrite: true, new: true });
     if (!updateSubService) {
       throw new NotFoundException();

@@ -130,7 +130,7 @@ export class CustomerService {
       image: image.url,
     });
     if (update) {
-      console.log(update);
+      return image;
     }
     // console.log('log 4 ', image);
     return image;

@@ -48,8 +48,8 @@ export class SubServiceService {
           mainTopic: item.mainTopic,
           image: {
             image1: image.url,
-            image2: item.image.image2 ? item.image.image2 : undefined,
-            image3: item.image.image3 ? item.image.image3 : undefined,
+            image2: item.image?.image2 ? item.image.image2 : '',
+            image3: item.image?.image3 ? item.image.image3 : '',
           },
         };
         await this.subServiceModel
@@ -155,6 +155,7 @@ export class SubServiceService {
       return error;
     }
   }
+
   async update(id: string, updateSubServiceDto: UpdateSubServiceDto) {
     const updateSubService = await this.subServiceModel
       .findByIdAndUpdate(id, {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Customer Update (With Image)" />
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: enableCors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +118,7 @@
       <workItem from="1649350846536" duration="9139000" />
       <workItem from="1649423248457" duration="3420000" />
       <workItem from="1649437163446" duration="7595000" />
-      <workItem from="1649490335753" duration="1698000" />
+      <workItem from="1649490335753" duration="2130000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -288,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649492015772</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fixed: Customer Update (With Image)">
+      <created>1649492198844</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649492198844</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixed: enableCors">
+      <created>1649492473063</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649492473063</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +333,8 @@
     <MESSAGE value="Done: Stripe Integrate" />
     <MESSAGE value="Update: Cognito Auth" />
     <MESSAGE value="Fixed: Customer Update (With Image)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Customer Update (With Image)" />
+    <MESSAGE value="Fixed: enableCors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed: enableCors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Image Update &amp;&amp; Change S3 Bucket Config">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed:  Sub Service Update Without FAQ ArrayObject">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,8 @@
       <workItem from="1649437163446" duration="7595000" />
       <workItem from="1649490335753" duration="8248000" />
       <workItem from="1649512814311" duration="5283000" />
-      <workItem from="1649519135637" duration="392000" />
+      <workItem from="1649519135637" duration="1810000" />
+      <workItem from="1649664002401" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -336,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649515225384</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Fixed:  Sub Service Update Without FAQ ArrayObject">
+      <created>1649519670619</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1649519670619</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +380,8 @@
     <MESSAGE value="Fixed: Update Customer" />
     <MESSAGE value="Fixed: Update Option  and Defined EnableCors For FE &amp; BE" />
     <MESSAGE value="Fixed: Image Update &amp;&amp; Change S3 Bucket Config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Image Update &amp;&amp; Change S3 Bucket Config" />
+    <MESSAGE value="Fixed:  Sub Service Update Without FAQ ArrayObject" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed:  Sub Service Update Without FAQ ArrayObject" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -139,7 +139,7 @@
       <workItem from="1649512814311" duration="5283000" />
       <workItem from="1649519135637" duration="1810000" />
       <workItem from="1649664002401" duration="4689000" />
-      <workItem from="1649735955789" duration="4234000" />
+      <workItem from="1649735955789" duration="5740000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -379,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649741885429</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Deploy to AWS">
+      <created>1649742918141</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1649742918141</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

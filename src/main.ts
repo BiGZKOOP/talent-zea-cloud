@@ -5,7 +5,7 @@ import { ConfigService } from '@nestjs/config';
 import { config } from 'aws-sdk';
 global['fetch'] = require('node-fetch');
 async function bootstrap() {
-  const port = process.env.PORT || 5000;
+  const port = process.env.PORT || 8080;
   const app = await NestFactory.create(AppModule, { cors: true });
   app.useGlobalPipes(new ValidationPipe());
   const configService = app.get(ConfigService);

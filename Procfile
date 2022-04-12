@@ -1,1 +1,2 @@
-web: node main.js
+web: npm run deploy
+

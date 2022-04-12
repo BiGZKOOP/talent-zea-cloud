@@ -21,7 +21,6 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "deploy": "npm ci && npm run build && npm run start:prod"
   },
-  "engines": { "node" : "14.16.0" },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "@nestjs/common": "^8.0.0",

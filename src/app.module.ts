@@ -8,6 +8,8 @@ import { MainServiceModule } from './model/main-service/main-service.module';
 import { SubServiceModule } from './model/sub-service/sub-service.module';
 import { AuthCognitoModule } from './model/auth-cognito/auth-cognito.module';
 import { StripeModule } from './model/stripe/stripe.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -43,7 +45,7 @@ import { StripeModule } from './model/stripe/stripe.module';
     AuthCognitoModule,
     StripeModule,
   ],
-  controllers: [],
-  providers: [],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

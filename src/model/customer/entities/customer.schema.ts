@@ -43,11 +43,11 @@ export class Customer {
   @Prop({ required: false })
   image?: string;
   @Prop()
-  userType: string;
-  @Prop()
   referralID?: string;
   @Prop()
   referralCount: number;
+  @Prop()
+  isFirstPayment?: boolean;
 }
 
 export const CustomerSchema = SchemaFactory.createForClass(Customer);

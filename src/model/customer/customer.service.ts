@@ -65,7 +65,7 @@ export class CustomerService {
       if (stripeCustomer) {
         try {
           try {
-            if (createCustomerDto.userType === 'refUser') {
+            if (createCustomerDto.referralID) {
               const checkMainUser = await this.getById(
                 createCustomerDto.referralID,
               );
@@ -77,18 +77,7 @@ export class CustomerService {
                 });
                 const customer = await createCustomer.save();
                 if (customer) {
-                  const refCount = checkMainUser.referralCount++;
-                  const updateNewUser =
-                    await this.customerModel.findByIdAndUpdate(
-                      createCustomerDto.referralID,
-                      {
-                        ...checkMainUser,
-                        referralCount: refCount,
-                      },
-                    );
-                  if (updateNewUser) {
-                    return customer;
-                  }
+                  return customer;
                 }
               }
             } else {

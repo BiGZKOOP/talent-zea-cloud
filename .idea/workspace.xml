@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Deploy to AWS">
-      <change afterPath="$PROJECT_DIR$/.ebextensions/nodecommand.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UpdateBug" />
+        <entry key="$PROJECT_DIR$" value="orderService" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,25 +39,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.eslint" value="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\node_modules\eslint" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\node_modules\typescript\lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\My Jobs\\BigZkoop\\Project\\Talant Zea\\Project File\\talent-zea-cloud\\node_modules\\prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\My Jobs\\BigZkoop\\Project\\Talant Zea\\Project File\\talent-zea-cloud\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\src\model\authentication\dto" />
@@ -82,6 +77,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start:dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -94,6 +99,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.build" />
       </list>
@@ -151,7 +159,12 @@
       <workItem from="1649512814311" duration="5283000" />
       <workItem from="1649519135637" duration="1810000" />
       <workItem from="1649664002401" duration="4689000" />
-      <workItem from="1649735955789" duration="11897000" />
+      <workItem from="1649735955789" duration="12867000" />
+      <workItem from="1649832768119" duration="24000" />
+      <workItem from="1649862771467" duration="1871000" />
+      <workItem from="1649865290155" duration="3494000" />
+      <workItem from="1649869124338" duration="3899000" />
+      <workItem from="1649910279410" duration="3823000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -426,7 +439,56 @@
       <option name="project" value="LOCAL" />
       <updated>1649750597437</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Deploy to AWS">
+      <created>1649754544142</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1649754544142</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Deploy to AWS">
+      <created>1649754690167</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1649754690167</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Deploy to AWS">
+      <created>1649755424196</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1649755424196</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Deploy to AWS">
+      <created>1649865277159</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1649865277159</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Deploy to AWS">
+      <created>1649869771866</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1649869771866</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Deploy to AWS">
+      <created>1649875857524</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1649875857524</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Deploy to AWS">
+      <created>1649876331885</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1649876331885</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

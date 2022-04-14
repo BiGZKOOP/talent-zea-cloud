@@ -81,7 +81,6 @@ export class CustomerController {
                 password: createCustomerDto.password,
                 phoneNumber: createCustomerDto.phoneNumber,
                 dob: createCustomerDto.dob,
-                userType: 'refUser',
                 referralID: createCustomerDto.referralID,
               };
               const customer = await this.customerService.create(

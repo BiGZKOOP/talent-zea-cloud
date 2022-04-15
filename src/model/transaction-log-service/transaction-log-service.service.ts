@@ -7,15 +7,18 @@ import {
   TransactionLogService,
 } from './entities/transaction-log-service.schema';
 import { Model } from 'mongoose';
-
+import * as mongoose from 'mongoose';
 @Injectable()
 export class TransactionLogServiceService {
   @InjectModel(TransactionLogService.name)
   private transactionModel: Model<TransactionDocument>;
-  async create(transactionData: any): Promise<TransactionLogService> {
+  async create(
+    transactionData: any,
+    session: mongoose.ClientSession | null = null,
+  ): Promise<TransactionLogService> {
     try {
       const createTransaction = new this.transactionModel(transactionData);
-      const transaction = await createTransaction.save();
+      const transaction = await createTransaction.save({ session });
       if (transaction) {
         return transaction;
       }

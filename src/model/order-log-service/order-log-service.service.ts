@@ -1,5 +1,4 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { CreateOrderLogServiceDto } from './dto/create-order-log-service.dto';
 import { UpdateOrderLogServiceDto } from './dto/update-order-log-service.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import {
@@ -7,15 +6,19 @@ import {
   OrderLogService,
 } from './entities/order-log-service.schema';
 import { Model } from 'mongoose';
+import * as mongoose from 'mongoose';
 
 @Injectable()
 export class OrderLogServiceService {
   @InjectModel(OrderLogService.name)
   private orderLogModel: Model<OrderLogDocument>;
-  async create(createOrderLogServiceDto: any): Promise<any> {
+  async create(
+    createOrderLogServiceDto: any,
+    session: mongoose.ClientSession | null = null,
+  ): Promise<any> {
     try {
       const createOrderLog = new this.orderLogModel(createOrderLogServiceDto);
-      const orderLog = await createOrderLog.save();
+      const orderLog = await createOrderLog.save({ session });
       if (orderLog) {
         return orderLog;
       }

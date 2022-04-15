@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Deploy to AWS">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Order Service with Transaction and Error Handling" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="orderService" />
+        <entry key="$PROJECT_DIR$" value="awsHosting" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,7 +158,8 @@
       <workItem from="1649862771467" duration="1871000" />
       <workItem from="1649865290155" duration="3494000" />
       <workItem from="1649869124338" duration="3899000" />
-      <workItem from="1649910279410" duration="3823000" />
+      <workItem from="1649910279410" duration="5900000" />
+      <workItem from="1649946932127" duration="31902000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -488,7 +483,28 @@
       <option name="project" value="LOCAL" />
       <updated>1649876331885</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Deploy to AWS">
+      <created>1649922710430</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1649922710430</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Deploy to AWS">
+      <created>1649928313018</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1649928313018</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Done: Order Service with Transaction and Error Handling">
+      <created>1650020726356</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1650020726356</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +541,8 @@
     <MESSAGE value="Fixed: Image Update &amp;&amp; Change S3 Bucket Config" />
     <MESSAGE value="Fixed:  Sub Service Update Without FAQ ArrayObject" />
     <MESSAGE value="Deploy to AWS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy to AWS" />
+    <MESSAGE value="Done: Order Service with Transaction and Error Handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Order Service with Transaction and Error Handling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

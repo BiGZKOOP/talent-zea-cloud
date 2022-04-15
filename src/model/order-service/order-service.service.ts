@@ -1,5 +1,4 @@
 import {
-  BadRequestException,
   HttpException,
   HttpStatus,
   Injectable,
@@ -34,48 +33,31 @@ export class OrderServiceService {
     session.startTransaction();
     try {
       const createOrder = new this.orderModel(orderData);
-      const order = await createOrder.save();
+      const order = await createOrder.save({ session });
       if (order) {
-        const orderLog = await this.orderLogService.create({
-          orderID: order._id,
-          logStatus: 0,
-        });
+        const orderLog = await this.orderLogService.create(
+          {
+            orderID: order._id,
+            logStatus: 0,
+          },
+          session,
+        );
         if (orderLog) {
           let stripePayment = null;
-          try {
-            stripePayment = await this.stripeService.charge(
-              orderData.amount,
-              orderData.paymentMethodId,
-              orderData.stripeCustomerId,
-            );
-          } catch (error) {
-            console.log(error);
-            if (error.type === 'StripeInvalidRequestError') {
-              const deleteOrder = await this.orderModel.deleteMany({
-                _id: order._id,
-              });
-              if (deleteOrder) {
-                const deleteOrderLog = await this.orderLogService.remove(
-                  order._id,
-                );
-                if (deleteOrderLog) {
-                  throw new HttpException(
-                    'Transaction failed, Try aging !',
-                    HttpStatus.BAD_REQUEST,
-                  );
-                }
-              }
-            }
-          }
+          stripePayment = await this.stripeService.charge(
+            orderData.amount,
+            orderData.paymentMethodId,
+            orderData.stripeCustomerId,
+          );
 
           if (stripePayment) {
-            const transactionLog = await this.transactionService.create({
-              orderID: order._id,
-              customerID: orderData.customerID,
-            });
-            if (transactionLog) {
-              return transactionLog;
-            }
+            await this.transactionService.create(
+              {
+                orderID: order._id,
+                customerID: orderData.customerID,
+              },
+              session,
+            );
           }
         }
       }
@@ -84,7 +66,6 @@ export class OrderServiceService {
       return order;
     } catch (error) {
       await session.abortTransaction();
-
       throw error;
     } finally {
       await session.endSession();

@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Deploy to AWS">
-      <change afterPath="$PROJECT_DIR$/src/model/order-log-service/dto/create-order-log-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-log-service/dto/update-order-log-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-log-service/entities/order-log-service.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-service/dto/create-order-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-service/dto/update-order-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-service/entities/order-service.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-service/order-service.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-service/order-service.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/transaction-log-service/dto/create-transaction-log-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/transaction-log-service/dto/update-transaction-log-service.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/transaction-log-service/entities/transaction-log-service.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/transaction-log-service/transaction-log-service.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/transaction-log-service/transaction-log-service.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/transaction-log-service/transaction-log-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Order Service with Transaction and Error Handling" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +159,7 @@
       <workItem from="1649865290155" duration="3494000" />
       <workItem from="1649869124338" duration="3899000" />
       <workItem from="1649910279410" duration="5900000" />
-      <workItem from="1649946932127" duration="31544000" />
+      <workItem from="1649946932127" duration="31902000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1645641195531</created>
@@ -519,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649928313018</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Done: Order Service with Transaction and Error Handling">
+      <created>1650020726356</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1650020726356</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +541,8 @@
     <MESSAGE value="Fixed: Image Update &amp;&amp; Change S3 Bucket Config" />
     <MESSAGE value="Fixed:  Sub Service Update Without FAQ ArrayObject" />
     <MESSAGE value="Deploy to AWS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy to AWS" />
+    <MESSAGE value="Done: Order Service with Transaction and Error Handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Order Service with Transaction and Error Handling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

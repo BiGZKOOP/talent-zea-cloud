@@ -10,6 +10,9 @@ import { AuthCognitoModule } from './model/auth-cognito/auth-cognito.module';
 import { StripeModule } from './model/stripe/stripe.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { OrderServiceModule } from './model/order-service/order-service.module';
+import { OrderLogServiceModule } from './model/order-log-service/order-log-service.module';
+import { TransactionLogServiceModule } from './model/transaction-log-service/transaction-log-service.module';
 
 @Module({
   imports: [
@@ -44,6 +47,9 @@ import { AppService } from './app.service';
     SubServiceModule,
     AuthCognitoModule,
     StripeModule,
+    OrderServiceModule,
+    OrderLogServiceModule,
+    TransactionLogServiceModule,
   ],
   controllers: [AppController],
   providers: [AppService],

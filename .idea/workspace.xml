@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Order Service with Transaction and Error Handling &amp;&amp; Fine-tune Mongo Transaction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\My Jobs\\BigZkoop\\Project\\Talant Zea\\Project File\\talent-zea-cloud\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\My Jobs\\BigZkoop\\Project\\Talant Zea\\Project File\\talent-zea-cloud\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -166,14 +167,12 @@
       <workItem from="1650057557531" duration="8000" />
       <workItem from="1650057677497" duration="2598000" />
       <workItem from="1650098169739" duration="3217000" />
-      <workItem from="1650102798347" duration="2057000" />
-    </task>
-    <task id="LOCAL-00006" summary="Done: Update Customer">
-      <created>1647094412875</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1647094412875</updated>
+      <workItem from="1650102798347" duration="2594000" />
+      <workItem from="1650114418095" duration="960000" />
+      <workItem from="1650126080022" duration="130000" />
+      <workItem from="1650126215117" duration="114000" />
+      <workItem from="1650182328514" duration="1418000" />
+      <workItem from="1650190767704" duration="3642000" />
     </task>
     <task id="LOCAL-00007" summary="Done: Fix Edit User Bug">
       <created>1647156167534</created>
@@ -511,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650102859510</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Done: Order Service with Transaction and Error Handling &amp;&amp; Fine-tune Mongo Transaction">
+      <created>1650105927128</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1650105927128</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -53,8 +53,8 @@ export class MainServiceService {
           mainTopic: item.mainTopic,
           image: {
             image1: image.url,
-            image2: item.image.image2 ? item.image.image2 : undefined,
-            image3: item.image.image3 ? item.image.image3 : undefined,
+            image2: item.image?.image2 ? item.image.image2 : undefined,
+            image3: item.image?.image3 ? item.image.image3 : undefined,
           },
         };
         await this.mainServiceModel

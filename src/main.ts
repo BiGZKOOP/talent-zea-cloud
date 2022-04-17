@@ -5,7 +5,7 @@ import { ConfigService } from '@nestjs/config';
 import { config } from 'aws-sdk';
 global['fetch'] = require('node-fetch');
 async function bootstrap() {
-  const port = process.env.PORT || 8081;
+  const PORT = process.env.PORT || 8080;
   const app = await NestFactory.create(AppModule, { cors: true });
   app.useGlobalPipes(new ValidationPipe());
   const configService = app.get(ConfigService);
@@ -24,8 +24,8 @@ async function bootstrap() {
     region: configService.get('AWS_REGION'),
   });
 
-  await app.listen(port, () => {
-    console.log(`⛱ Talent Zea Cloud listening on port ${port}`);
+  await app.listen(process.env.PORT || 8081, () => {
+    console.log(`⛱ Talent Zea Cloud listening on port ${PORT}`);
     console.log('Press Ctrl+C to quit.');
   });
 }

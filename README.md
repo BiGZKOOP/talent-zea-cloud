@@ -44,6 +44,15 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+## Deploy
+```bash
+$  heroku login 
+$  heroku git:remote -a your-application-name
+$  git add .  
+$  git commit -am "Your Commit"
+$  git push heroku curruntBranchName:master
+$  git push heroku master  
+```
 
 ## Test
 

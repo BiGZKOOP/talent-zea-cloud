@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: MainService Bug">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Change Host Procfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,13 +179,7 @@
       <workItem from="1650600200175" duration="10000" />
       <workItem from="1650792278247" duration="3555000" />
       <workItem from="1650824575093" duration="1641000" />
-    </task>
-    <task id="LOCAL-00008" summary="Done: /me">
-      <created>1647593419403</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1647593419404</updated>
+      <workItem from="1650954946958" duration="1107000" />
     </task>
     <task id="LOCAL-00009" summary="Done: /me">
       <created>1647617415936</created>
@@ -524,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650212880586</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Fixed: Change Host Procfile">
+      <created>1650955015333</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1650955015333</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +564,8 @@
     <MESSAGE value="Done: Order Service with Transaction and Error Handling" />
     <MESSAGE value="Done: Order Service with Transaction and Error Handling &amp;&amp; Fine-tune Mongo Transaction" />
     <MESSAGE value="Fixed: MainService Bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: MainService Bug" />
+    <MESSAGE value="Fixed: Change Host Procfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Change Host Procfile" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

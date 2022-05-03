@@ -24,6 +24,8 @@ export class MainService {
     image2: string;
     image3: string;
   };
+  @Prop()
+  archive?: boolean;
 }
 
 export const MainServiceSchema = SchemaFactory.createForClass(MainService);

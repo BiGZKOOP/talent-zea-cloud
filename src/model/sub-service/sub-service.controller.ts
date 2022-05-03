@@ -208,7 +208,6 @@ export class SubServiceController {
           response.status(401).send(error);
         }
       } else {
-        console.log('Test Me');
         try {
           const updateService = await this.subServiceService.update(
             id,
@@ -233,5 +232,25 @@ export class SubServiceController {
   @UseGuards(AuthGuard('jwt'))
   remove(@Param('id') id: string) {
     return this.subServiceService.remove(+id);
+  }
+
+  @Patch('delete/:id')
+  @UseGuards(AuthGuard('jwt'))
+  async deleteSubService(@Param('id') id: string, @Res() response: Response) {
+    try {
+      const deleteSubServices = await this.subServiceService.deleteSubService(
+        id,
+      );
+      if (deleteSubServices) {
+        response.status(201).send({
+          statusCode: HttpStatus.OK,
+          message: 'SubService Delete successfully',
+          data: deleteSubServices,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      response.status(401).send(error);
+    }
   }
 }

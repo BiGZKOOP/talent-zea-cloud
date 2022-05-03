@@ -49,6 +49,9 @@ export class SubServiceController {
       description: Joi.string().required(),
       price: Joi.string().required(),
       faq: Joi.array().items(Joi.object()).required(),
+      expressDelivery: Joi.object({}),
+      sourceFiles: Joi.object({}),
+      revisions: Joi.object({}),
     });
     const validation = schema.validate(createSubServiceDto);
     if (!validation.error) {
@@ -149,6 +152,9 @@ export class SubServiceController {
       description: Joi.string(),
       faq: Joi.array().items(Joi.object()),
       price: Joi.string(),
+      expressDelivery: Joi.object({}),
+      sourceFiles: Joi.object({}),
+      revisions: Joi.object({}),
     });
     const validation = schema.validate(updateSubServiceDto);
     if (!validation.error) {

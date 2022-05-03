@@ -44,6 +44,9 @@ export class SubServiceService {
           mainService: item.mainService,
           description: item.description,
           faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
           subTopic: item.subTopic,
           mainTopic: item.mainTopic,
           image: {
@@ -75,6 +78,9 @@ export class SubServiceService {
           description: item.description,
           subTopic: item.subTopic,
           faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
           mainTopic: item.mainTopic,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -105,6 +111,9 @@ export class SubServiceService {
           description: item.description,
           subTopic: item.subTopic,
           faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
           mainTopic: item.mainTopic,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,

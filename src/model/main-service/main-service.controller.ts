@@ -252,4 +252,24 @@ export class MainServiceController {
       response.status(401).send(error);
     }
   }
+
+  @Patch('delete/:id')
+  @UseGuards(AuthGuard('jwt'))
+  async deleteMainService(@Param('id') id: string, @Res() response: Response) {
+    try {
+      const deleteMainService = await this.mainServiceService.deleteMainService(
+        id,
+      );
+      if (deleteMainService) {
+        response.status(201).send({
+          statusCode: HttpStatus.OK,
+          message: 'MainService Delete successfully',
+          data: deleteMainService,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      response.status(401).send(error);
+    }
+  }
 }

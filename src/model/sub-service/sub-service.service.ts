@@ -1,4 +1,9 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreateSubServiceDto } from './dto/create-sub-service.dto';
 import { UpdateSubServiceDto } from './dto/update-sub-service.dto';
 import { InjectModel } from '@nestjs/mongoose';
@@ -15,7 +20,10 @@ export class SubServiceService {
   ) {}
   async create(createSubServiceDto: CreateSubServiceDto): Promise<SubService> {
     try {
-      const createSubService = new this.subServiceModel(createSubServiceDto);
+      const createSubService = new this.subServiceModel({
+        ...createSubServiceDto,
+        archive: false,
+      });
       const sService = await createSubService.save();
       if (sService) {
         return sService;
@@ -134,7 +142,17 @@ export class SubServiceService {
   }
 
   async findAll() {
-    return this.subServiceModel.find().populate('mainService');
+    try {
+      const allSubService = await this.subServiceModel
+        .find({ archive: false })
+        .populate('mainService');
+      if (allSubService) {
+        return allSubService;
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
   }
 
   async findOne(id: string) {
@@ -159,6 +177,29 @@ export class SubServiceService {
         throw new NotFoundException();
       }
       return service;
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
+  }
+
+  async deleteSubService(id: string) {
+    try {
+      const updateSubService = await this.subServiceModel
+        .findByIdAndUpdate(id, {
+          archive: true,
+        })
+        .setOptions({ new: true });
+      if (updateSubService) {
+        return updateSubService;
+      }
+      throw new HttpException(
+        {
+          status: HttpStatus.FORBIDDEN,
+          error: 'There is an error ',
+        },
+        HttpStatus.FORBIDDEN,
+      );
     } catch (error) {
       console.log(error);
       return error;

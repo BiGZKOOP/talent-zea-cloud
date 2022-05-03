@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Update: Reademe File">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Update: SubService Add.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/jwt.strategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/file-service/file-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/file-service/file-service.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/main-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/transaction-log-service/transaction-log-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/transaction-log-service/transaction-log-service.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,14 +191,7 @@
       <workItem from="1650977766860" duration="4426000" />
       <workItem from="1650983591696" duration="30000" />
       <workItem from="1650986645197" duration="1426000" />
-      <workItem from="1651566454541" duration="3903000" />
-    </task>
-    <task id="LOCAL-00011" summary="Done: Main / Sub Service">
-      <created>1647882649870</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1647882649870</updated>
+      <workItem from="1651566454541" duration="11995000" />
     </task>
     <task id="LOCAL-00012" summary="Done: Main / Sub Service">
       <created>1647952884022</created>
@@ -545,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650959955872</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Update: SubService Add.">
+      <created>1651571051760</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1651571051760</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +578,8 @@
     <MESSAGE value="Fixed: MainService Bug" />
     <MESSAGE value="Fixed: Change Host Procfile" />
     <MESSAGE value="Update: Reademe File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: Reademe File" />
+    <MESSAGE value="Update: SubService Add." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: SubService Add." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,9 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreateMainServiceDto } from './dto/create-main-service.dto';
 import { UpdateMainServiceDto } from './dto/update-main-service.dto';
 import { InjectModel } from '@nestjs/mongoose';
@@ -23,7 +28,10 @@ export class MainServiceService {
     createMainServiceDto: CreateMainServiceDto,
   ): Promise<MainService> {
     try {
-      const createMainService = new this.mainServiceModel(createMainServiceDto);
+      const createMainService = new this.mainServiceModel({
+        ...createMainServiceDto,
+        archive: false,
+      });
       const mService = await createMainService.save();
       if (mService) {
         return mService;
@@ -127,7 +135,9 @@ export class MainServiceService {
   }
   async findAll() {
     try {
-      const allMainService = await this.mainServiceModel.find();
+      const allMainService = await this.mainServiceModel.find({
+        archive: false,
+      });
       if (allMainService) {
         return allMainService;
       }
@@ -179,6 +189,34 @@ export class MainServiceService {
     }
 
     return updateMService;
+  }
+
+  async deleteMainService(id: string) {
+    try {
+      const subService = await this.subService.findOne(id);
+      if (subService.archive && subService.archive === true) {
+        const deleteMain = await this.mainServiceModel
+          .findByIdAndUpdate(id, {
+            archive: true,
+          })
+          .setOptions({ new: true });
+        if (deleteMain) {
+          return deleteMain;
+        }
+      } else {
+        throw new HttpException(
+          {
+            status: HttpStatus.FORBIDDEN,
+            error:
+              "you can't delete main service without deleting it's sub service",
+          },
+          HttpStatus.FORBIDDEN,
+        );
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
   }
 
   async remove(id: string) {

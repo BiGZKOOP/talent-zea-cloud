@@ -62,6 +62,8 @@ export class SubService {
     price: number;
     count: number;
   };
+  @Prop()
+  archive?: boolean;
 }
 
 export const SubServiceSchema = SchemaFactory.createForClass(SubService);

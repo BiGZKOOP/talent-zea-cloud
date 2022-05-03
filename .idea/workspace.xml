@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Fixed: Change Host Procfile">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Update: Reademe File">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/auth-cognito/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/auth-cognito/jwt.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/dto/create-customer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/file-service/file-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/file-service/file-service.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/transaction-log-service/transaction-log-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/transaction-log-service/transaction-log-service.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +70,7 @@
       <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start:dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -180,13 +195,12 @@
       <workItem from="1650792278247" duration="3555000" />
       <workItem from="1650824575093" duration="1641000" />
       <workItem from="1650954946958" duration="3366000" />
-    </task>
-    <task id="LOCAL-00010" summary="Done: Main / Sub Service">
-      <created>1647882579498</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1647882579498</updated>
+      <workItem from="1650961252860" duration="1116000" />
+      <workItem from="1650964009855" duration="635000" />
+      <workItem from="1650977766860" duration="4426000" />
+      <workItem from="1650983591696" duration="30000" />
+      <workItem from="1650986645197" duration="1426000" />
+      <workItem from="1651566454541" duration="3903000" />
     </task>
     <task id="LOCAL-00011" summary="Done: Main / Sub Service">
       <created>1647882649870</created>
@@ -524,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650956294239</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Update: Reademe File">
+      <created>1650959955872</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1650959955872</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +586,8 @@
     <MESSAGE value="Done: Order Service with Transaction and Error Handling &amp;&amp; Fine-tune Mongo Transaction" />
     <MESSAGE value="Fixed: MainService Bug" />
     <MESSAGE value="Fixed: Change Host Procfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: Change Host Procfile" />
+    <MESSAGE value="Update: Reademe File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: Reademe File" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

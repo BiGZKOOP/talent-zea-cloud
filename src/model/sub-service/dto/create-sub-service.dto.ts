@@ -28,4 +28,21 @@ export class CreateSubServiceDto {
       answers: string;
     },
   ];
+
+  expressDelivery: {
+    hide: boolean;
+    price: number;
+    count: number;
+  };
+
+  sourceFiles: {
+    hide: boolean;
+    price: boolean;
+  };
+
+  revisions: {
+    hide: boolean;
+    price: number;
+    count: number;
+  };
 }

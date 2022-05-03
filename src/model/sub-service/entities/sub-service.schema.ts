@@ -42,6 +42,26 @@ export class SubService {
       answers: string;
     },
   ];
+
+  @Prop({ required: false, type: mongoose.Schema.Types.Mixed })
+  expressDelivery: {
+    hide: boolean;
+    price: number;
+    count: number;
+  };
+
+  @Prop({ required: false, type: mongoose.Schema.Types.Mixed })
+  sourceFiles: {
+    hide: boolean;
+    price: boolean;
+  };
+
+  @Prop({ required: false, type: mongoose.Schema.Types.Mixed })
+  revisions: {
+    hide: boolean;
+    price: number;
+    count: number;
+  };
 }
 
 export const SubServiceSchema = SchemaFactory.createForClass(SubService);

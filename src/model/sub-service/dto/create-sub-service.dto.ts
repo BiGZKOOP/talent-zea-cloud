@@ -13,7 +13,7 @@ export class CreateSubServiceDto {
   description: string;
   @IsString()
   @IsNotEmpty()
-  orderPrice: string;
+  price: string;
   @IsString()
   @IsNotEmpty()
   mainService: MainService;

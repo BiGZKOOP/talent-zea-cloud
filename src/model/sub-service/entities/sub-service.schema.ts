@@ -21,7 +21,7 @@ export class SubService {
   @Prop()
   subTopic: string;
   @Prop()
-  orderPrice: string;
+  price: string;
   @Prop()
   description: string;
   @Prop({ type: mongoose.Schema.Types.String, ref: MainService.name })

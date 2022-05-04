@@ -47,11 +47,14 @@ export class SubServiceController {
       mainTopic: Joi.string().required(),
       subTopic: Joi.string().required(),
       description: Joi.string().required(),
-      price: Joi.string().required(),
+      orderPrice: Joi.string().required(),
       faq: Joi.array().items(Joi.object()).required(),
       expressDelivery: Joi.object({}),
       sourceFiles: Joi.object({}),
       revisions: Joi.object({}),
+      orderTopic: Joi.string().required(),
+      orderDescription: Joi.string().required(),
+      deliveryTime: Joi.string().required(),
     });
     const validation = schema.validate(createSubServiceDto);
     if (!validation.error) {
@@ -151,10 +154,13 @@ export class SubServiceController {
       subTopic: Joi.string(),
       description: Joi.string(),
       faq: Joi.array().items(Joi.object()),
-      price: Joi.string(),
+      orderPrice: Joi.string(),
       expressDelivery: Joi.object({}),
       sourceFiles: Joi.object({}),
       revisions: Joi.object({}),
+      orderTopic: Joi.string().required(),
+      orderDescription: Joi.string().required(),
+      deliveryTime: Joi.string().required(),
     });
     const validation = schema.validate(updateSubServiceDto);
     if (!validation.error) {

@@ -15,7 +15,7 @@ export class UpdateSubServiceDto extends PartialType(CreateSubServiceDto) {
   description: string;
   // @IsString()
   // @IsNotEmpty()
-  price: string;
+  orderPrice: string;
   // @IsString()
   // @IsNotEmpty()
   mainService: MainService;
@@ -46,4 +46,7 @@ export class UpdateSubServiceDto extends PartialType(CreateSubServiceDto) {
     price: number;
     count: number;
   };
+  orderTopic: string;
+  orderDescription: string;
+  deliveryTime: string;
 }

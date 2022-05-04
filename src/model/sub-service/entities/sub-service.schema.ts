@@ -21,7 +21,7 @@ export class SubService {
   @Prop()
   subTopic: string;
   @Prop()
-  price: string;
+  orderPrice: string;
   @Prop()
   description: string;
   @Prop({ type: mongoose.Schema.Types.String, ref: MainService.name })
@@ -64,6 +64,12 @@ export class SubService {
   };
   @Prop()
   archive?: boolean;
+  @Prop()
+  orderTopic: string;
+  @Prop()
+  orderDescription: string;
+  @Prop()
+  deliveryTime: string;
 }
 
 export const SubServiceSchema = SchemaFactory.createForClass(SubService);

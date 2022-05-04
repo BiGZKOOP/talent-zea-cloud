@@ -57,6 +57,10 @@ export class SubServiceService {
           revisions: item?.revisions,
           subTopic: item.subTopic,
           mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
           image: {
             image1: image.url,
             image2: item.image?.image2 ? item.image.image2 : '',
@@ -90,6 +94,10 @@ export class SubServiceService {
           sourceFiles: item?.sourceFiles,
           revisions: item?.revisions,
           mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
             image2: image.url,
@@ -123,6 +131,10 @@ export class SubServiceService {
           sourceFiles: item?.sourceFiles,
           revisions: item?.revisions,
           mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
             image2: item.image.image2 ? item.image.image2 : undefined,

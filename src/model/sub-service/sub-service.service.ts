@@ -169,7 +169,9 @@ export class SubServiceService {
 
   async findOne(id: string) {
     try {
-      const singleService = await this.subServiceModel.findById(id);
+      const singleService = await this.subServiceModel
+        .findById(id)
+        .populate('mainService', 'mainTopic');
       if (!singleService) {
         throw new NotFoundException();
       }

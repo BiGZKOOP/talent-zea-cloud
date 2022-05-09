@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Delete Services">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update SubService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,14 +187,9 @@
       <workItem from="1650983591696" duration="30000" />
       <workItem from="1650986645197" duration="1426000" />
       <workItem from="1651566454541" duration="12894000" />
-      <workItem from="1651640900411" duration="377000" />
-    </task>
-    <task id="LOCAL-00013" summary="Done: Main / Sub Service">
-      <created>1649091522784</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1649091522784</updated>
+      <workItem from="1651640900411" duration="3070000" />
+      <workItem from="1651865199897" duration="614000" />
+      <workItem from="1652078150497" duration="1505000" />
     </task>
     <task id="LOCAL-00014" summary="Fixed: Referral UserBug">
       <created>1649094376676</created>
@@ -535,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651589390423</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Done: Update SubService">
+      <created>1651641802948</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1651641802948</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial Commit" />
     <MESSAGE value="Done: Update Customer" />
     <MESSAGE value="Done: Fix Edit User Bug" />
     <MESSAGE value="Done: /me" />
@@ -579,7 +577,8 @@
     <MESSAGE value="Update: Reademe File" />
     <MESSAGE value="Update: SubService Add." />
     <MESSAGE value="Done: Delete Services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Delete Services" />
+    <MESSAGE value="Done: Update SubService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Update SubService" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

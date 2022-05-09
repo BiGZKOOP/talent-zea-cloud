@@ -64,6 +64,12 @@ export class SubService {
   };
   @Prop()
   archive?: boolean;
+  @Prop()
+  orderTopic: string;
+  @Prop()
+  orderDescription: string;
+  @Prop()
+  deliveryTime: string;
 }
 
 export const SubServiceSchema = SchemaFactory.createForClass(SubService);

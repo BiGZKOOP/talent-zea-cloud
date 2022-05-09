@@ -52,6 +52,9 @@ export class SubServiceController {
       expressDelivery: Joi.object({}),
       sourceFiles: Joi.object({}),
       revisions: Joi.object({}),
+      orderTopic: Joi.string().required(),
+      orderDescription: Joi.string().required(),
+      deliveryTime: Joi.string().required(),
     });
     const validation = schema.validate(createSubServiceDto);
     if (!validation.error) {
@@ -155,6 +158,9 @@ export class SubServiceController {
       expressDelivery: Joi.object({}),
       sourceFiles: Joi.object({}),
       revisions: Joi.object({}),
+      orderTopic: Joi.string().required(),
+      orderDescription: Joi.string().required(),
+      deliveryTime: Joi.string().required(),
     });
     const validation = schema.validate(updateSubServiceDto);
     if (!validation.error) {

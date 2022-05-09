@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { MainService } from '../../main-service/entities/main-service.schema';
 
 export class CreateSubServiceDto {
@@ -45,4 +45,13 @@ export class CreateSubServiceDto {
     price: number;
     count: number;
   };
+  @IsString()
+  @IsNotEmpty()
+  orderTopic: string;
+  @IsString()
+  @IsNotEmpty()
+  orderDescription: string;
+  @IsString()
+  @IsNotEmpty()
+  deliveryTime: string;
 }

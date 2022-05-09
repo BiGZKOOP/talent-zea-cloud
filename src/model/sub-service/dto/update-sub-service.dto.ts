@@ -46,4 +46,7 @@ export class UpdateSubServiceDto extends PartialType(CreateSubServiceDto) {
     price: number;
     count: number;
   };
+  orderTopic: string;
+  orderDescription: string;
+  deliveryTime: string;
 }

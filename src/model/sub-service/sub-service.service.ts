@@ -171,7 +171,7 @@ export class SubServiceService {
     try {
       const singleService = await this.subServiceModel
         .findById(id)
-        .populate('mainService', 'mainTopic');
+        .populate('mainService', 'mainTopic').where('archive').equals(false)
       if (!singleService) {
         throw new NotFoundException();
       }
@@ -186,7 +186,7 @@ export class SubServiceService {
     try {
       const service = await this.subServiceModel
         .find({ mainService })
-        .populate('mainService');
+        .populate('mainService').where('archive').equals(false);
       if (!service) {
         throw new NotFoundException();
       }

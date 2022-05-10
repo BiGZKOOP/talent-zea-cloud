@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Customer } from '../../customer/entities/customer.schema';
 import { Type } from 'class-transformer';
 import * as mongoose from 'mongoose';
+import { SubService } from 'src/model/sub-service/entities/sub-service.schema';
 
 export type OrderServiceDocument = OrderService & Document;
 
@@ -23,5 +24,23 @@ export class OrderService {
   orderStatus: number;
   @Prop()
   amount: number;
+  @Prop({ required: false, type: mongoose.Schema.Types.Mixed })
+  expressDelivery: {
+    price: number;
+  };
+
+  @Prop({ required: false, type: mongoose.Schema.Types.Mixed })
+  sourceFiles: {
+    price: boolean;
+  };
+
+  @Prop({ required: false, type: mongoose.Schema.Types.Mixed })
+  revisions: {
+    price: number;
+    count: number;
+  };
+  @Prop({ type: mongoose.Schema.Types.String, ref: SubService.name })
+  @Type(() => SubService)
+  subServiceID: SubService;
 }
 export const OrderServiceSchema = SchemaFactory.createForClass(OrderService);

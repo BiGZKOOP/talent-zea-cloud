@@ -32,7 +32,12 @@ export class OrderServiceController {
       paymentMethodId: Joi.string().required(),
       stripeCustomerId: Joi.string().required(),
       amount: Joi.number().required(),
+      expressDelivery: Joi.any(),
+      sourceFiles: Joi.any(),
+      revisions: Joi.any(),
+      subServiceID: Joi.string().required(),
     });
+
     const validation = schema.validate(createOrderServiceDto);
     if (validation.error) {
       response.status(401).send(validation.error);

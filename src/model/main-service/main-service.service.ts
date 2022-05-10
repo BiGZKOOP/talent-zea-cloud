@@ -149,7 +149,7 @@ export class MainServiceService {
 
   async findOne(id: string) {
     try {
-      const singleService = await this.mainServiceModel.findById(id);
+      const singleService = await this.mainServiceModel.findById(id).where('archive').equals(false);
       if (!singleService) {
         throw new NotFoundException();
       }
@@ -162,7 +162,7 @@ export class MainServiceService {
 
   async findOneMainServiceWithSubService(id: string) {
     try {
-      const requestMainService = await this.mainServiceModel.findById(id);
+      const requestMainService = await this.mainServiceModel.findById(id).where('archive').equals(false);
       if (!requestMainService) {
         throw new NotFoundException();
       } else {

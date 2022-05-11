@@ -23,6 +23,8 @@ export class OrderService {
   @Prop()
   orderStatus: number;
   @Prop()
+  orderMonth: number;
+  @Prop()
   amount: number;
   @Prop({ required: false, type: mongoose.Schema.Types.Mixed })
   expressDelivery: {

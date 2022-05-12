@@ -117,11 +117,23 @@ export class OrderServiceService {
   }
 
   async findAll() {
-    return this.orderModel.find();
+    return this.orderModel
+      .find()
+      .populate('customerID')
+      .populate({
+        path: 'subServiceID',
+        populate: { path: 'mainService' },
+      });
   }
   async getOrderByStatus(state: number): Promise<OrderService[]> {
     try {
-      const orderState = await this.orderModel.find({ orderStatus: state });
+      const orderState = await this.orderModel
+        .find({ orderStatus: state })
+        .populate('customerID')
+        .populate({
+          path: 'subServiceID',
+          populate: { path: 'mainService' },
+        });
       if (orderState) {
         return orderState;
       }

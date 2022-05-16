@@ -34,10 +34,12 @@ export class OrderServiceService {
   ): Promise<any> {
     const session = await this.connection.startSession();
     session.startTransaction();
+    const customeOrder = orderData;
     try {
       const createOrder = new this.orderModel({
-        ...orderData,
+        ...customeOrder,
         orderMonth: monthValue,
+        amount: orderData.amount / 100,
       });
       const order = await createOrder.save({ session });
       if (order) {
@@ -183,6 +185,57 @@ export class OrderServiceService {
       throw new NotFoundException();
     }
     return updateOrder;
+  }
+
+  async updateOrderStatus(id: string, status: number) {
+    const pendingStatus = await this.getSingleOrder(id);
+    if (pendingStatus.orderStatus === 0) {
+      if (status === -1 || status === 1) {
+        const updateOrder = await this.orderModel
+          .findByIdAndUpdate(id, {
+            orderStatus: status,
+          })
+          .setOptions({ new: true });
+        if (!updateOrder) {
+          throw new NotFoundException();
+        }
+        return updateOrder;
+      } else {
+        throw new HttpException(
+          "Can't allow this order status",
+          HttpStatus.FORBIDDEN,
+        );
+      }
+    }
+    if (pendingStatus.orderStatus === 1) {
+      if (status === -1 || status === 2) {
+        const updateOrder = await this.orderModel
+          .findByIdAndUpdate(id, {
+            orderStatus: status,
+          })
+          .setOptions({ new: true });
+        if (!updateOrder) {
+          throw new NotFoundException();
+        }
+        return updateOrder;
+      } else {
+        throw new HttpException(
+          "Can't allow this order status",
+          HttpStatus.FORBIDDEN,
+        );
+      }
+    }
+    if (pendingStatus.orderStatus === 2) {
+        throw new HttpException(
+          "Can't allow this order status",
+          HttpStatus.FORBIDDEN,
+        );
+    }if(pendingStatus.orderStatus===-1){
+      throw new HttpException(
+        "Can't allow this order status",
+        HttpStatus.FORBIDDEN,
+      );
+    }
   }
 
   remove(id: number) {

@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update OrderService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/order-log-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/entities/order-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/entities/order-service.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/stripe/charge.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/stripe/charge.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/stripe/stripe.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/stripe/stripe.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -203,20 +198,11 @@
       <workItem from="1652253153980" duration="152000" />
       <workItem from="1652253321799" duration="2414000" />
       <workItem from="1652255924405" duration="8229000" />
-    </task>
-    <task id="LOCAL-00014" summary="Fixed: Referral UserBug">
-      <created>1649094376676</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1649094376676</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service">
-      <created>1649267588297</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1649267588297</updated>
+      <workItem from="1652264292964" duration="980000" />
+      <workItem from="1652290361293" duration="106000" />
+      <workItem from="1652327604187" duration="1002000" />
+      <workItem from="1652332385590" duration="1309000" />
+      <workItem from="1652595670237" duration="1432000" />
     </task>
     <task id="LOCAL-00016" summary="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service">
       <created>1649273141665</created>
@@ -547,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651641802948</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Done: Update OrderService">
+      <created>1652264516260</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1652264516260</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Done: Update OrderService">
+      <created>1652327827362</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1652327827362</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +566,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Done: Update Customer" />
     <MESSAGE value="Done: Fix Edit User Bug" />
     <MESSAGE value="Done: /me" />
     <MESSAGE value="Done: Main / Sub Service" />
@@ -591,7 +590,8 @@
     <MESSAGE value="Update: SubService Add." />
     <MESSAGE value="Done: Delete Services" />
     <MESSAGE value="Done: Update SubService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Update SubService" />
+    <MESSAGE value="Done: Update OrderService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Update OrderService" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -28,11 +28,17 @@ export class OrderServiceService {
     private stripeService: StripeService,
     private transactionService: TransactionLogServiceService,
   ) {}
-  async create(orderData: CreateOrderServiceDto): Promise<any> {
+  async create(
+    orderData: CreateOrderServiceDto,
+    monthValue: any,
+  ): Promise<any> {
     const session = await this.connection.startSession();
     session.startTransaction();
     try {
-      const createOrder = new this.orderModel(orderData);
+      const createOrder = new this.orderModel({
+        ...orderData,
+        orderMonth: monthValue,
+      });
       const order = await createOrder.save({ session });
       if (order) {
         const orderLog = await this.orderLogService.create(
@@ -74,7 +80,13 @@ export class OrderServiceService {
 
   async getSingleOrder(id: string) {
     try {
-      const singleOrder = await this.orderModel.findById(id);
+      const singleOrder = await this.orderModel
+        .findById(id)
+        .populate('customerID')
+        .populate({
+          path: 'subServiceID',
+          populate: { path: 'mainService' },
+        });
       if (singleOrder) {
         return singleOrder;
       }
@@ -87,7 +99,13 @@ export class OrderServiceService {
 
   async findAllOrderBelongToSingleCustomer(id: string) {
     try {
-      const singleOrder = await this.orderModel.find({ customerID: id });
+      const singleOrder = await this.orderModel
+        .find({ customerID: id })
+        .populate('customerID')
+        .populate({
+          path: 'subServiceID',
+          populate: { path: 'mainService' },
+        });
       if (singleOrder) {
         return singleOrder;
       }
@@ -99,11 +117,53 @@ export class OrderServiceService {
   }
 
   async findAll() {
-    return this.orderModel.find();
+    return this.orderModel
+      .find()
+      .populate('customerID')
+      .populate({
+        path: 'subServiceID',
+        populate: { path: 'mainService' },
+      });
+  }
+  async getOrderByStatus(state: number): Promise<OrderService[]> {
+    try {
+      const orderState = await this.orderModel
+        .find({ orderStatus: state })
+        .populate('customerID')
+        .populate({
+          path: 'subServiceID',
+          populate: { path: 'mainService' },
+        });
+      if (orderState) {
+        return orderState;
+      }
+      throw new HttpException('Order not found', HttpStatus.NOT_FOUND);
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+  async getOrderByMonth(month: number): Promise<OrderService[]> {
+    try {
+      const orderState = await this.orderModel.find({ orderMonth: month });
+      if (orderState) {
+        return orderState;
+      }
+      throw new HttpException('Order not found', HttpStatus.NOT_FOUND);
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
   }
 
   async findOne(_id: string) {
-    const order = await this.orderModel.findOne({ _id });
+    const order = await this.orderModel
+      .findOne({ _id })
+      .populate('customerID')
+      .populate({
+        path: 'subServiceID',
+        populate: { path: 'mainService' },
+      });
     if (order) {
       return order;
     }

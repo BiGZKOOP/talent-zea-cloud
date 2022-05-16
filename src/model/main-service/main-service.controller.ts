@@ -123,6 +123,8 @@ export class MainServiceController {
 
   @Get(':id')
   async findOne(@Param('id') id: string, @Res() response: Response) {
+    console.log("Test");
+    
     try {
       const singleData =
         await this.mainServiceService.findOneMainServiceWithSubService(id);

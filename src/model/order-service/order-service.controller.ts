@@ -9,6 +9,8 @@ import {
   Res,
   HttpStatus,
   HttpException,
+  Query,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { OrderServiceService } from './order-service.service';
 import { CreateOrderServiceDto } from './dto/create-order-service.dto';
@@ -140,6 +142,11 @@ export class OrderServiceController {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  @Patch('orders/:id')
+  async updateOrderStatus(@Query('status',ParseIntPipe) status: number, @Param('id') id: string,){
+   return   this.orderServiceService.updateOrderStatus(id,status)
   }
 
   @Patch(':id')

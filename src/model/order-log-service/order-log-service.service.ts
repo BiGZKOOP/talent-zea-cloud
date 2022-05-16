@@ -49,6 +49,25 @@ export class OrderLogServiceService {
     return `This action updates a #${id} orderLogService`;
   }
 
+  async orderLogStatusUpdate(id: string, status: number) {
+    try {
+      const updateOrderStatus = await this.orderLogModel
+        .findOneAndUpdate(
+          { orderID: id },
+          {
+            logStatus: status,
+          },
+        )
+        .setOptions({ new: true });
+      if (updateOrderStatus) {
+        return updateOrderStatus;
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+
   async remove(orderID: string) {
     return this.orderLogModel.deleteMany({ orderID: orderID });
   }

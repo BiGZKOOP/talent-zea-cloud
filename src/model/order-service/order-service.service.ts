@@ -199,6 +199,7 @@ export class OrderServiceService {
         if (!updateOrder) {
           throw new NotFoundException();
         }
+        this.orderLogService.orderLogStatusUpdate(id, status);
         return updateOrder;
       } else {
         throw new HttpException(
@@ -217,6 +218,7 @@ export class OrderServiceService {
         if (!updateOrder) {
           throw new NotFoundException();
         }
+        this.orderLogService.orderLogStatusUpdate(id, status);
         return updateOrder;
       } else {
         throw new HttpException(
@@ -226,11 +228,12 @@ export class OrderServiceService {
       }
     }
     if (pendingStatus.orderStatus === 2) {
-        throw new HttpException(
-          "Can't allow this order status",
-          HttpStatus.FORBIDDEN,
-        );
-    }if(pendingStatus.orderStatus===-1){
+      throw new HttpException(
+        "Can't allow this order status",
+        HttpStatus.FORBIDDEN,
+      );
+    }
+    if (pendingStatus.orderStatus === -1) {
       throw new HttpException(
         "Can't allow this order status",
         HttpStatus.FORBIDDEN,

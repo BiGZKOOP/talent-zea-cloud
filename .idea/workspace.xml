@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update OrderService">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Prod01">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/database.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/database.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/entities/customer.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="updateOrder" />
+        <entry key="$PROJECT_DIR$" value="fine-tune-01" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -205,14 +204,8 @@
       <workItem from="1652332385590" duration="1309000" />
       <workItem from="1652595670237" duration="1432000" />
       <workItem from="1652686396965" duration="588000" />
-      <workItem from="1653028830818" duration="913000" />
-    </task>
-    <task id="LOCAL-00016" summary="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service">
-      <created>1649273141665</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1649273141665</updated>
+      <workItem from="1653028830818" duration="1781000" />
+      <workItem from="1653030640267" duration="1320000" />
     </task>
     <task id="LOCAL-00017" summary="Done: Add Guards for privet routers">
       <created>1649307710757</created>
@@ -550,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652327827362</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Done: Prod01">
+      <created>1653030036053</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1653030036053</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Done: Fix Edit User Bug" />
     <MESSAGE value="Done: /me" />
     <MESSAGE value="Done: Main / Sub Service" />
     <MESSAGE value="Fixed: Referral UserBug" />
@@ -594,7 +593,8 @@
     <MESSAGE value="Done: Delete Services" />
     <MESSAGE value="Done: Update SubService" />
     <MESSAGE value="Done: Update OrderService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Update OrderService" />
+    <MESSAGE value="Done: Prod01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Prod01" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -12,7 +12,7 @@ import { Module } from '@nestjs/common';
         const password = configService.get('MONGO_PASSWORD');
         const database = configService.get('MONGO_DATABASE');
         return {
-          uri: `mongodb+srv://${username}:${password}@talentzea.baq33.mongodb.net/${database}?retryWrites=true&w=majority`,
+          uri: `mongodb+srv://${username}:${password}@talentzea.yohoc.mongodb.net/${database}?retryWrites=true&w=majority`,
           dbName: database,
         };
       },

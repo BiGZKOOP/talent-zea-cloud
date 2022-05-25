@@ -31,6 +31,13 @@ export class SubServiceController {
       { name: 'image1', maxCount: 1 },
       { name: 'image2', maxCount: 1 },
       { name: 'image3', maxCount: 1 },
+      { name: 'image4', maxCount: 1 },
+      { name: 'image5', maxCount: 1 },
+      { name: 'image6', maxCount: 1 },
+      { name: 'image7', maxCount: 1 },
+      { name: 'image8', maxCount: 1 },
+      { name: 'image9', maxCount: 1 },
+      { name: 'image10', maxCount: 1 },
     ]),
   )
   async create(
@@ -41,6 +48,13 @@ export class SubServiceController {
       image1?: Express.Multer.File;
       image2?: Express.Multer.File;
       image3?: Express.Multer.File;
+      image4?: Express.Multer.File;
+      image5?: Express.Multer.File;
+      image6?: Express.Multer.File;
+      image7?: Express.Multer.File;
+      image8?: Express.Multer.File;
+      image9?: Express.Multer.File;
+      image10?: Express.Multer.File;
     },
   ) {
     const schema = Joi.object({
@@ -89,7 +103,62 @@ export class SubServiceController {
               files.image3[0].fieldname,
             );
           }
-
+          if (files.image4[0]) {
+            image = await this.subServiceService.addServiceImage(
+              subService._id,
+              files.image4[0].buffer,
+              files.image4[0].originalname,
+              files.image4[0].fieldname,
+            );
+          }
+          if (files.image5[0]) {
+            image = await this.subServiceService.addServiceImage(
+              subService._id,
+              files.image5[0].buffer,
+              files.image5[0].originalname,
+              files.image5[0].fieldname,
+            );
+          }
+          if (files.image6[0]) {
+            image = await this.subServiceService.addServiceImage(
+              subService._id,
+              files.image6[0].buffer,
+              files.image6[0].originalname,
+              files.image6[0].fieldname,
+            );
+          }
+          if (files.image7[0]) {
+            image = await this.subServiceService.addServiceImage(
+              subService._id,
+              files.image7[0].buffer,
+              files.image7[0].originalname,
+              files.image7[0].fieldname,
+            );
+          }
+          if (files.image8[0]) {
+            image = await this.subServiceService.addServiceImage(
+              subService._id,
+              files.image8[0].buffer,
+              files.image8[0].originalname,
+              files.image8[0].fieldname,
+            );
+          }
+          if (files.image9[0]) {
+            image = await this.subServiceService.addServiceImage(
+              subService._id,
+              files.image9[0].buffer,
+              files.image9[0].originalname,
+              files.image9[0].fieldname,
+            );
+          }
+          if (files.image10[0]) {
+            image = await this.subServiceService.addServiceImage(
+              subService._id,
+              files.image10[0].buffer,
+              files.image10[0].originalname,
+              files.image10[0].fieldname,
+            );
+          }
           if (image && image) {
             response.status(201).send({
               statusCode: HttpStatus.OK,
@@ -136,6 +205,13 @@ export class SubServiceController {
       { name: 'image1', maxCount: 1 },
       { name: 'image2', maxCount: 1 },
       { name: 'image3', maxCount: 1 },
+      { name: 'image4', maxCount: 1 },
+      { name: 'image5', maxCount: 1 },
+      { name: 'image6', maxCount: 1 },
+      { name: 'image7', maxCount: 1 },
+      { name: 'image8', maxCount: 1 },
+      { name: 'image9', maxCount: 1 },
+      { name: 'image10', maxCount: 1 },
     ]),
   )
   async update(
@@ -147,6 +223,13 @@ export class SubServiceController {
       image1?: Express.Multer.File;
       image2?: Express.Multer.File;
       image3?: Express.Multer.File;
+      image4?: Express.Multer.File;
+      image5?: Express.Multer.File;
+      image6?: Express.Multer.File;
+      image7?: Express.Multer.File;
+      image8?: Express.Multer.File;
+      image9?: Express.Multer.File;
+      image10?: Express.Multer.File;
     },
   ) {
     const schema = Joi.object({
@@ -197,6 +280,62 @@ export class SubServiceController {
                 files.image3[0].buffer,
                 files.image3[0].originalname,
                 files.image3[0].fieldname,
+              );
+            }
+            if (files.image4[0]) {
+              image = await this.subServiceService.addServiceImage(
+                updateService._id,
+                files.image4[0].buffer,
+                files.image4[0].originalname,
+                files.image4[0].fieldname,
+              );
+            }
+            if (files.image5[0]) {
+              image = await this.subServiceService.addServiceImage(
+                updateService._id,
+                files.image5[0].buffer,
+                files.image5[0].originalname,
+                files.image5[0].fieldname,
+              );
+            }
+            if (files.image6[0]) {
+              image = await this.subServiceService.addServiceImage(
+                updateService._id,
+                files.image6[0].buffer,
+                files.image6[0].originalname,
+                files.image6[0].fieldname,
+              );
+            }
+            if (files.image7[0]) {
+              image = await this.subServiceService.addServiceImage(
+                updateService._id,
+                files.image7[0].buffer,
+                files.image7[0].originalname,
+                files.image7[0].fieldname,
+              );
+            }
+            if (files.image8[0]) {
+              image = await this.subServiceService.addServiceImage(
+                updateService._id,
+                files.image8[0].buffer,
+                files.image8[0].originalname,
+                files.image8[0].fieldname,
+              );
+            }
+            if (files.image9[0]) {
+              image = await this.subServiceService.addServiceImage(
+                updateService._id,
+                files.image9[0].buffer,
+                files.image9[0].originalname,
+                files.image9[0].fieldname,
+              );
+            }
+            if (files.image10[0]) {
+              image = await this.subServiceService.addServiceImage(
+                updateService._id,
+                files.image10[0].buffer,
+                files.image10[0].originalname,
+                files.image10[0].fieldname,
               );
             }
 

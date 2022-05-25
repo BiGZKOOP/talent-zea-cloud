@@ -151,6 +151,295 @@ export class SubServiceService {
         throw new NotFoundException();
       }
     }
+
+    if (imageData === 'image4') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          mainService: item.mainService,
+          description: item.description,
+          subTopic: item.subTopic,
+          faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
+          mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
+            image4: image.url,
+          },
+        };
+        await this.subServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+    if (imageData === 'image5') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          mainService: item.mainService,
+          description: item.description,
+          subTopic: item.subTopic,
+          faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
+          mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
+            image4: item.image.image4 ? item.image.image4 : undefined,
+            image5: image.url,
+          },
+        };
+        await this.subServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+    if (imageData === 'image6') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          mainService: item.mainService,
+          description: item.description,
+          subTopic: item.subTopic,
+          faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
+          mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
+            image4: item.image.image4 ? item.image.image4 : undefined,
+            image5: item.image.image5 ? item.image.image5 : undefined,
+            image6: image.url,
+          },
+        };
+        await this.subServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+
+    if (imageData === 'image7') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          mainService: item.mainService,
+          description: item.description,
+          subTopic: item.subTopic,
+          faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
+          mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
+            image4: item.image.image4 ? item.image.image4 : undefined,
+            image5: item.image.image5 ? item.image.image5 : undefined,
+            image6: item.image.image6 ? item.image.image6 : undefined,
+            image7: image.url,
+          },
+        };
+        await this.subServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+    if (imageData === 'image8') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          mainService: item.mainService,
+          description: item.description,
+          subTopic: item.subTopic,
+          faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
+          mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
+            image4: item.image.image4 ? item.image.image4 : undefined,
+            image5: item.image.image5 ? item.image.image5 : undefined,
+            image6: item.image.image6 ? item.image.image6 : undefined,
+            image7: item.image.image7 ? item.image.image7 : undefined,
+            image8: image.url,
+          },
+        };
+        await this.subServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+    if (imageData === 'image9') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          mainService: item.mainService,
+          description: item.description,
+          subTopic: item.subTopic,
+          faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
+          mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
+            image4: item.image.image4 ? item.image.image4 : undefined,
+            image5: item.image.image5 ? item.image.image5 : undefined,
+            image6: item.image.image6 ? item.image.image6 : undefined,
+            image7: item.image.image7 ? item.image.image7 : undefined,
+            image8: item.image.image8 ? item.image.image8 : undefined,
+            image9: image.url,
+          },
+        };
+        await this.subServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
+    if (imageData === 'image10') {
+      const image = await this.fileUploadService.uploadPublicFile(
+        imageBuffer,
+        filename,
+      );
+      const item = await this.findOne(id);
+      if (item) {
+        const serviceId = item._id;
+        const data = {
+          mainService: item.mainService,
+          description: item.description,
+          subTopic: item.subTopic,
+          faq: item.faq,
+          expressDelivery: item?.expressDelivery,
+          sourceFiles: item?.sourceFiles,
+          revisions: item?.revisions,
+          mainTopic: item.mainTopic,
+          orderTopic: item.orderTopic,
+          orderDescription: item.orderDescription,
+          deliveryTime: item.deliveryTime,
+          price: item.price,
+          image: {
+            image1: item.image.image1 ? item.image.image1 : undefined,
+            image2: item.image.image2 ? item.image.image2 : undefined,
+            image3: item.image.image3 ? item.image.image3 : undefined,
+            image4: item.image.image4 ? item.image.image4 : undefined,
+            image5: item.image.image5 ? item.image.image5 : undefined,
+            image6: item.image.image6 ? item.image.image6 : undefined,
+            image7: item.image.image7 ? item.image.image7 : undefined,
+            image8: item.image.image8 ? item.image.image8 : undefined,
+            image9: item.image.image9 ? item.image.image9 : undefined,
+            image10: image.url,
+          },
+        };
+        await this.subServiceModel
+          .findByIdAndUpdate(serviceId, {
+            ...data,
+          })
+          .setOptions({ new: true });
+        return image;
+      } else {
+        throw new NotFoundException();
+      }
+    }
   }
 
   async findAll() {
@@ -171,7 +460,9 @@ export class SubServiceService {
     try {
       const singleService = await this.subServiceModel
         .findById(id)
-        .populate('mainService', 'mainTopic').where('archive').equals(false)
+        .populate('mainService', 'mainTopic')
+        .where('archive')
+        .equals(false);
       if (!singleService) {
         throw new NotFoundException();
       }
@@ -186,7 +477,9 @@ export class SubServiceService {
     try {
       const service = await this.subServiceModel
         .find({ mainService })
-        .populate('mainService').where('archive').equals(false);
+        .populate('mainService')
+        .where('archive')
+        .equals(false);
       if (!service) {
         throw new NotFoundException();
       }

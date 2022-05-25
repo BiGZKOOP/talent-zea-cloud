@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Prod01">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/main-service/entities/main-service.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,14 +205,9 @@
       <workItem from="1652595670237" duration="1432000" />
       <workItem from="1652686396965" duration="588000" />
       <workItem from="1653028830818" duration="1781000" />
-      <workItem from="1653030640267" duration="1320000" />
-    </task>
-    <task id="LOCAL-00017" summary="Done: Add Guards for privet routers">
-      <created>1649307710757</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1649307710757</updated>
+      <workItem from="1653030640267" duration="2151000" />
+      <workItem from="1653033084707" duration="77000" />
+      <workItem from="1653485650541" duration="1782000" />
     </task>
     <task id="LOCAL-00018" summary="Done: Add Guards for privet routers">
       <created>1649307733439</created>
@@ -550,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653030036053</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Done: Prod01">
+      <created>1653032098745</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1653032098745</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

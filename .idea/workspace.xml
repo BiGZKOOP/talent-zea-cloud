@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Upload 10 Images">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Prod01" />
+        <entry key="$PROJECT_DIR$" value="CR-01(image-10)" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -206,14 +205,7 @@
       <workItem from="1653028830818" duration="1781000" />
       <workItem from="1653030640267" duration="2151000" />
       <workItem from="1653033084707" duration="77000" />
-      <workItem from="1653485650541" duration="2863000" />
-    </task>
-    <task id="LOCAL-00019" summary="Fixed: Sub &amp; Main Service Issue">
-      <created>1649352380667</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1649352380667</updated>
+      <workItem from="1653485650541" duration="3646000" />
     </task>
     <task id="LOCAL-00020" summary="Fixed: Sub &amp; Main Service Issue">
       <created>1649399010365</created>
@@ -551,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653490278963</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Done: Upload 10 Images">
+      <created>1653491205275</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1653491205275</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

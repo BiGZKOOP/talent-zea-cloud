@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Resolved conflit" />
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Resolved conflit">
+      <change afterPath="$PROJECT_DIR$/src/model/source-file/dto/create-source-file.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/source-file/dto/update-source-file.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/source-file/entities/source-file.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/source-file/source-file.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/source-file/source-file.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/source-file/source-file.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\BigZkoop\Project\Talent Zea\Project Files\talent-zea-cloud" />
       <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud\src\model\authentication\dto" />
       <recent name="D:\My Jobs\BigZkoop\Project\Talant Zea\Project File\talent-zea-cloud" />
     </key>
@@ -204,6 +214,7 @@
       <workItem from="1653030640267" duration="2151000" />
       <workItem from="1653033084707" duration="77000" />
       <workItem from="1653485650541" duration="3646000" />
+      <workItem from="1653567984359" duration="5493000" />
     </task>
     <task id="LOCAL-00021" summary="Done: Stripe Integrate">
       <created>1649440776660</created>

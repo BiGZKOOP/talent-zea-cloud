@@ -13,6 +13,7 @@ import { AppService } from './app.service';
 import { OrderServiceModule } from './model/order-service/order-service.module';
 import { OrderLogServiceModule } from './model/order-log-service/order-log-service.module';
 import { TransactionLogServiceModule } from './model/transaction-log-service/transaction-log-service.module';
+import { SourceFileModule } from './model/source-file/source-file.module';
 
 @Module({
   imports: [
@@ -50,6 +51,7 @@ import { TransactionLogServiceModule } from './model/transaction-log-service/tra
     OrderServiceModule,
     OrderLogServiceModule,
     TransactionLogServiceModule,
+    SourceFileModule,
   ],
   controllers: [AppController],
   providers: [AppService],

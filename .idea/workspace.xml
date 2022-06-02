@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Source File Upload">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Required Page">
       <change afterPath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/model/required-page/dto/update-required-page.dto.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/model/required-page/entities/required-page.schema.ts" afterDir="false" />
@@ -14,7 +14,9 @@
       <change beforePath="$PROJECT_DIR$/src/model/order-log-service/dto/create-order-log-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/dto/create-order-log-service.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/order-log-service/entities/order-log-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/entities/order-log-service.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/order-service/dto/create-order-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/dto/create-order-service.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/order-service/dto/update-order-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/dto/update-order-service.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/order-service/entities/order-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/entities/order-service.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" afterDir="false" />
@@ -235,14 +237,7 @@
       <workItem from="1653970644210" duration="33000" />
       <workItem from="1654010090422" duration="1113000" />
       <workItem from="1654144069798" duration="6219000" />
-      <workItem from="1654152482466" duration="325000" />
-    </task>
-    <task id="LOCAL-00022" summary="Update: Cognito Auth">
-      <created>1649484271102</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1649484271102</updated>
+      <workItem from="1654152482466" duration="1011000" />
     </task>
     <task id="LOCAL-00023" summary="Fixed: Customer Update (With Image)">
       <created>1649491920806</created>
@@ -580,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653574132892</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Done: Required Page">
+      <created>1654153500465</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1654153500466</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service" />
     <MESSAGE value="Done: Add Guards for privet routers" />
     <MESSAGE value="Fixed: Sub &amp; Main Service Issue" />
     <MESSAGE value="Done: Stripe Integrate" />
@@ -624,7 +625,8 @@
     <MESSAGE value="Done: Upload 10 Images" />
     <MESSAGE value="Done: Resolved conflit" />
     <MESSAGE value="Done: Source File Upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Source File Upload" />
+    <MESSAGE value="Done: Required Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Required Page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

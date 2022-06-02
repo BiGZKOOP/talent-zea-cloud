@@ -40,6 +40,7 @@ export class OrderServiceController {
       sourceFiles: Joi.any(),
       revisions: Joi.any(),
       subServiceID: Joi.string().required(),
+      meta_data: Joi.array().items(Joi.object()),
     });
 
     const validation = schema.validate(createOrderServiceDto);
@@ -145,8 +146,11 @@ export class OrderServiceController {
   }
 
   @Patch('orders/:id')
-  async updateOrderStatus(@Query('status',ParseIntPipe) status: number, @Param('id') id: string,){
-   return   this.orderServiceService.updateOrderStatus(id,status)
+  async updateOrderStatus(
+    @Query('status', ParseIntPipe) status: number,
+    @Param('id') id: string,
+  ) {
+    return this.orderServiceService.updateOrderStatus(id, status);
   }
 
   @Patch(':id')

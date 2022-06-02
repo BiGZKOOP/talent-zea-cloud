@@ -44,5 +44,13 @@ export class OrderService {
   @Prop({ type: mongoose.Schema.Types.String, ref: SubService.name })
   @Type(() => SubService)
   subServiceID: SubService;
+
+  @Prop()
+  meta_data?: [
+    {
+      key?: string;
+      value?: string;
+    },
+  ];
 }
 export const OrderServiceSchema = SchemaFactory.createForClass(OrderService);

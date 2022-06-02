@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import * as mongoose from 'mongoose';
 import { MainService } from '../../main-service/entities/main-service.schema';
 import { Type } from 'class-transformer';
+import { RequiredPageEntity } from '../../required-page/entities/required-page.schema';
 
 export type MainServiceDocument = SubService & Document;
 
@@ -27,6 +28,10 @@ export class SubService {
   @Prop({ type: mongoose.Schema.Types.String, ref: MainService.name })
   @Type(() => MainService)
   mainService: MainService;
+
+  @Prop({ type: mongoose.Schema.Types.String, ref: RequiredPageEntity.name })
+  @Type(() => RequiredPageEntity)
+  requiredPage?: RequiredPageEntity;
 
   @Prop({ type: mongoose.Schema.Types.Mixed, required: false })
   image: {

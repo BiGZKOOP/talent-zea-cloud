@@ -14,6 +14,6 @@ import { FileServiceModule } from '../file-service/file-service.module';
   ],
   controllers: [SubServiceController],
   providers: [SubServiceService],
-  exports: [SubServiceService]
+  exports: [SubServiceService],
 })
 export class SubServiceModule {}

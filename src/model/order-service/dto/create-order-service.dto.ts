@@ -33,4 +33,11 @@ export class CreateOrderServiceDto {
   };
   @IsNotEmpty()
   subServiceID: SubService;
+
+  meta_data?: [
+    {
+      key?: string;
+      value?: string;
+    },
+  ];
 }

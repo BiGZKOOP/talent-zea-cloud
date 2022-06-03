@@ -249,7 +249,7 @@ export class SubServiceController {
     if (!validation.error) {
       response.status(401).send(validation.error);
     } else {
-      const subServiceModel: CreateSubServiceDto = validation.value;
+      const subServiceModel: UpdateSubServiceDto = validation.value;
       if (Object.keys(files).length !== 0) {
         try {
           const updateService = await this.subServiceService.update(

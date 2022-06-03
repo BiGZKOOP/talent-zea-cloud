@@ -60,6 +60,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: image.url,
@@ -97,6 +98,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -134,6 +136,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -172,6 +175,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -210,6 +214,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -249,6 +254,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -290,6 +296,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -331,6 +338,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -373,6 +381,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -416,6 +425,7 @@ export class SubServiceService {
           orderTopic: item.orderTopic,
           orderDescription: item.orderDescription,
           deliveryTime: item.deliveryTime,
+          requiredPage: item?.requiredPage ? item.requiredPage : undefined,
           price: item.price,
           image: {
             image1: item.image.image1 ? item.image.image1 : undefined,
@@ -446,7 +456,8 @@ export class SubServiceService {
     try {
       const allSubService = await this.subServiceModel
         .find({ archive: false })
-        .populate('mainService');
+        .populate('mainService')
+        .populate('requiredPage');
       if (allSubService) {
         return allSubService;
       }
@@ -457,10 +468,12 @@ export class SubServiceService {
   }
 
   async findOne(id: string) {
+    console.log('createRequiredPageDto.subService', id);
     try {
       const singleService = await this.subServiceModel
         .findById(id)
         .populate('mainService', 'mainTopic')
+        .populate('requiredPage')
         .where('archive')
         .equals(false);
       if (!singleService) {
@@ -478,6 +491,7 @@ export class SubServiceService {
       const service = await this.subServiceModel
         .find({ mainService })
         .populate('mainService')
+        .populate('requiredPage')
         .where('archive')
         .equals(false);
       if (!service) {
@@ -526,6 +540,19 @@ export class SubServiceService {
     return updateSubService;
   }
 
+  async updateReqID(id: string, reqID: string) {
+    try {
+      const reqUpdate = await this.subServiceModel
+        .findOneAndUpdate({ _id: id }, { requiredPage: reqID })
+        .setOptions({ new: true });
+      if (reqUpdate) {
+        return reqUpdate;
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
   remove(id: number) {
     return `This action removes a #${id} subService`;
   }

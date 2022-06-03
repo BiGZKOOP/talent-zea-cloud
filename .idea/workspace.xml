@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Resolved conflit">
-      <change afterPath="$PROJECT_DIR$/src/model/source-file/dto/create-source-file.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/source-file/dto/update-source-file.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/source-file/entities/source-file.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/source-file/source-file.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/source-file/source-file.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/source-file/source-file.service.ts" afterDir="false" />
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Required Page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="CR-01(image-10)" />
+        <entry key="$PROJECT_DIR$" value="CR-01" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -214,21 +213,17 @@
       <workItem from="1653030640267" duration="2151000" />
       <workItem from="1653033084707" duration="77000" />
       <workItem from="1653485650541" duration="3646000" />
-      <workItem from="1653567984359" duration="5493000" />
-    </task>
-    <task id="LOCAL-00021" summary="Done: Stripe Integrate">
-      <created>1649440776660</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1649440776660</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Update: Cognito Auth">
-      <created>1649484271102</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1649484271102</updated>
+      <workItem from="1653567984359" duration="6498000" />
+      <workItem from="1653749196516" duration="4623000" />
+      <workItem from="1653885777288" duration="1210000" />
+      <workItem from="1653897194841" duration="91000" />
+      <workItem from="1653928330459" duration="681000" />
+      <workItem from="1653970644210" duration="33000" />
+      <workItem from="1654010090422" duration="1113000" />
+      <workItem from="1654144069798" duration="6219000" />
+      <workItem from="1654152482466" duration="1847000" />
+      <workItem from="1654235197792" duration="1063000" />
+      <workItem from="1654236287536" duration="513000" />
     </task>
     <task id="LOCAL-00023" summary="Fixed: Customer Update (With Image)">
       <created>1649491920806</created>
@@ -559,7 +554,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653492399025</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Done: Source File Upload">
+      <created>1653574132892</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1653574132892</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Done: Required Page">
+      <created>1654153500465</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1654153500466</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,8 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed: Referral UserBug" />
-    <MESSAGE value="Done: Authentication with AWS Cognito&#10;Update: Add price field to sub service" />
     <MESSAGE value="Done: Add Guards for privet routers" />
     <MESSAGE value="Fixed: Sub &amp; Main Service Issue" />
     <MESSAGE value="Done: Stripe Integrate" />
@@ -603,7 +610,9 @@
     <MESSAGE value="Done: Prod01" />
     <MESSAGE value="Done: Upload 10 Images" />
     <MESSAGE value="Done: Resolved conflit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Resolved conflit" />
+    <MESSAGE value="Done: Source File Upload" />
+    <MESSAGE value="Done: Required Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Required Page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -6,6 +6,8 @@ import {
   RequiredPageEntity,
   RequiredPageSchema,
 } from './entities/required-page.schema';
+import { SubServiceModule } from '../sub-service/sub-service.module';
+import { SubServiceService } from '../sub-service/sub-service.service';
 
 @Module({
   imports: [
@@ -15,8 +17,10 @@ import {
         schema: RequiredPageSchema,
       },
     ]),
+    SubServiceModule,
   ],
   controllers: [RequiredPageController],
   providers: [RequiredPageService],
+  exports: [RequiredPageService],
 })
 export class RequiredPageModule {}

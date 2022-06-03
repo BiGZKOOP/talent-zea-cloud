@@ -1,4 +1,4 @@
-import { IsArray, IsNotEmpty } from 'class-validator';
+import { IsArray, IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateRequiredPageDto {
   @IsArray()
@@ -11,4 +11,7 @@ export class CreateRequiredPageDto {
       placeHolder?: string;
     },
   ];
+  @IsString()
+  @IsNotEmpty()
+  subService: string;
 }

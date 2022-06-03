@@ -468,6 +468,7 @@ export class SubServiceService {
   }
 
   async findOne(id: string) {
+    console.log('createRequiredPageDto.subService', id);
     try {
       const singleService = await this.subServiceModel
         .findById(id)
@@ -539,6 +540,19 @@ export class SubServiceService {
     return updateSubService;
   }
 
+  async updateReqID(id: string, reqID: string) {
+    try {
+      const reqUpdate = await this.subServiceModel
+        .findOneAndUpdate({ _id: id }, { requiredPage: reqID })
+        .setOptions({ new: true });
+      if (reqUpdate) {
+        return reqUpdate;
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
   remove(id: number) {
     return `This action removes a #${id} subService`;
   }

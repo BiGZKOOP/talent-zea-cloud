@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Required Page">
-      <change afterPath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/required-page/dto/update-required-page.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/required-page/entities/required-page.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/required-page/required-page.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer/customer.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/dto/create-order-log-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/dto/create-order-log-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-log-service/entities/order-log-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-log-service/entities/order-log-service.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/dto/create-order-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/dto/create-order-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/dto/update-order-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/dto/update-order-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/entities/order-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/entities/order-service.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/create-sub-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/dto/update-sub-service.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/entities/sub-service.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +221,9 @@
       <workItem from="1653970644210" duration="33000" />
       <workItem from="1654010090422" duration="1113000" />
       <workItem from="1654144069798" duration="6219000" />
-      <workItem from="1654152482466" duration="1011000" />
+      <workItem from="1654152482466" duration="1847000" />
+      <workItem from="1654235197792" duration="1063000" />
+      <workItem from="1654236287536" duration="513000" />
     </task>
     <task id="LOCAL-00023" summary="Fixed: Customer Update (With Image)">
       <created>1649491920806</created>

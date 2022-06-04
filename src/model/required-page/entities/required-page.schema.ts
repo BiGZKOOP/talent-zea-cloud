@@ -23,6 +23,9 @@ export class RequiredPageEntity {
       placeHolder?: string;
     },
   ];
+
+  @Prop()
+  type: string;
 }
 
 export const RequiredPageSchema =

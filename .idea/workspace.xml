@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Required Page">
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update Service for  Required Page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/order-service/order-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/entities/required-page.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/entities/required-page.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,14 +221,9 @@
       <workItem from="1654144069798" duration="6219000" />
       <workItem from="1654152482466" duration="1847000" />
       <workItem from="1654235197792" duration="1063000" />
-      <workItem from="1654236287536" duration="513000" />
-    </task>
-    <task id="LOCAL-00023" summary="Fixed: Customer Update (With Image)">
-      <created>1649491920806</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1649491920806</updated>
+      <workItem from="1654236287536" duration="587000" />
+      <workItem from="1654237097015" duration="800000" />
+      <workItem from="1654342056014" duration="679000" />
     </task>
     <task id="LOCAL-00024" summary="Fixed: Customer Update (With Image)">
       <created>1649492015772</created>
@@ -568,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654153500466</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Done: Update Service for  Required Page">
+      <created>1654236863237</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1654236863237</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Done: Add Guards for privet routers" />
     <MESSAGE value="Fixed: Sub &amp; Main Service Issue" />
     <MESSAGE value="Done: Stripe Integrate" />
     <MESSAGE value="Update: Cognito Auth" />
@@ -612,7 +611,8 @@
     <MESSAGE value="Done: Resolved conflit" />
     <MESSAGE value="Done: Source File Upload" />
     <MESSAGE value="Done: Required Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Required Page" />
+    <MESSAGE value="Done: Update Service for  Required Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done: Update Service for  Required Page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

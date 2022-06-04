@@ -17,17 +17,15 @@ export class RequiredPageService {
     private readonly subService: SubServiceService,
   ) {}
 
-  async create(createRequiredPageDto: CreateRequiredPageDto) {
+  async create(createRequiredPageDto: CreateRequiredPageDto, id: string) {
     try {
-      const isSubService = await this.subService.findOne(
-        createRequiredPageDto.subService,
-      );
+      const isSubService = await this.subService.findOne(id);
       if (isSubService) {
         const reqLog = new this.requiredModel(createRequiredPageDto);
         const reqPage = await reqLog.save();
         if (reqPage) {
           const updateReqID = await this.subService.updateReqID(
-            createRequiredPageDto.subService,
+            id,
             reqPage._id,
           );
           if (updateReqID) {

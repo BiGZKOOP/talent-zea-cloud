@@ -19,14 +19,15 @@ import * as Joi from '@hapi/joi';
 export class RequiredPageController {
   constructor(private readonly requiredPageService: RequiredPageService) {}
 
-  @Post()
+  @Post(':id')
   async create(
+    @Param('id') id: string,
     @Body() createRequiredPageDto: CreateRequiredPageDto,
     @Res() response: Response,
   ) {
     const schema = Joi.object({
       meta_data: Joi.array().items(Joi.object()).required(),
-      subService: Joi.string().required(),
+      type: Joi.string().required(),
     });
     const validation = schema.validate(createRequiredPageDto);
     if (validation.error) {
@@ -34,7 +35,7 @@ export class RequiredPageController {
     } else {
       try {
         const reqModel: CreateRequiredPageDto = validation.value;
-        const reqPage = await this.requiredPageService.create(reqModel);
+        const reqPage = await this.requiredPageService.create(reqModel, id);
         if (reqPage) {
           response.status(201).send({
             statusCode: HttpStatus.OK,

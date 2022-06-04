@@ -13,5 +13,5 @@ export class CreateRequiredPageDto {
   ];
   @IsString()
   @IsNotEmpty()
-  subService: string;
+  type: string;
 }

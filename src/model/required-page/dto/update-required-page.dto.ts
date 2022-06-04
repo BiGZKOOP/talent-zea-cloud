@@ -10,6 +10,7 @@ export class UpdateRequiredPageDto extends PartialType(CreateRequiredPageDto) {
       label: string;
       description?: string;
       placeHolder?: string;
+      type: string;
     },
   ];
 }

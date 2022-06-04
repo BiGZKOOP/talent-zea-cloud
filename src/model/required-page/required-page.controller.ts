@@ -27,7 +27,6 @@ export class RequiredPageController {
   ) {
     const schema = Joi.object({
       meta_data: Joi.array().items(Joi.object()).required(),
-      type: Joi.string().required(),
     });
     const validation = schema.validate(createRequiredPageDto);
     if (validation.error) {

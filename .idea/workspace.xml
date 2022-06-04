@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update Service for  Required Page" />
+    <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update Service for  Required Page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/dto/create-required-page.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/entities/required-page.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/entities/required-page.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,6 +222,8 @@
       <workItem from="1654152482466" duration="1847000" />
       <workItem from="1654235197792" duration="1063000" />
       <workItem from="1654236287536" duration="587000" />
+      <workItem from="1654237097015" duration="800000" />
+      <workItem from="1654342056014" duration="679000" />
     </task>
     <task id="LOCAL-00024" summary="Fixed: Customer Update (With Image)">
       <created>1649492015772</created>

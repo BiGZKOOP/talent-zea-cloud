@@ -21,11 +21,9 @@ export class RequiredPageEntity {
       label: string;
       description?: string;
       placeHolder?: string;
+      type: string;
     },
   ];
-
-  @Prop()
-  type: string;
 }
 
 export const RequiredPageSchema =

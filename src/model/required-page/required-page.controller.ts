@@ -83,8 +83,24 @@ export class RequiredPageController {
     }
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.requiredPageService.remove(+id);
+  @Delete(':id/:subId')
+  async remove(
+    @Param('id') id: string,
+    @Param('subId') subId: string,
+    @Res() response: Response,
+  ) {
+    try {
+      const isDelete = await this.requiredPageService.remove(id, subId);
+      if (isDelete) {
+        response.status(201).send({
+          statusCode: HttpStatus.OK,
+          message: 'ReqPage is deleted',
+          data: isDelete,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      response.status(401).send(error);
+    }
   }
 }

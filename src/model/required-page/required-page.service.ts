@@ -1,4 +1,9 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreateRequiredPageDto } from './dto/create-required-page.dto';
 import { UpdateRequiredPageDto } from './dto/update-required-page.dto';
 import { InjectModel } from '@nestjs/mongoose';
@@ -63,7 +68,25 @@ export class RequiredPageService {
     }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} requiredPage`;
+  async remove(id: string, subID: string) {
+    try {
+      const findSubService = await this.subService.findOne(subID);
+      if (findSubService) {
+        const deleteReqFromSub = await this.subService.deleteReqPage(subID);
+        if (deleteReqFromSub) {
+          const deleteReq = await this.requiredModel.findOneAndDelete({
+            _id: id,
+          });
+          if (deleteReq) {
+            return deleteReq;
+          }
+        }
+      } else {
+        throw new HttpException('There is an error', HttpStatus.FORBIDDEN);
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
   }
 }

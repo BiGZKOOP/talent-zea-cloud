@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e0314d0d-59d2-4feb-aba5-82087bff2866" name="Changes" comment="Done: Update Service for  Required Page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/required-page/required-page.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/sub-service/sub-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,13 +223,8 @@
       <workItem from="1654236287536" duration="587000" />
       <workItem from="1654237097015" duration="800000" />
       <workItem from="1654342056014" duration="1208000" />
-    </task>
-    <task id="LOCAL-00025" summary="Fixed: Customer Update (With Image)">
-      <created>1649492198844</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1649492198844</updated>
+      <workItem from="1654352601347" duration="1590000" />
+      <workItem from="1654404438472" duration="1007000" />
     </task>
     <task id="LOCAL-00026" summary="Fixed: enableCors">
       <created>1649492473063</created>
@@ -564,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654342775548</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Done: Update Service for  Required Page">
+      <created>1654352819889</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1654352819889</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

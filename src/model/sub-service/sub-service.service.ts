@@ -468,7 +468,6 @@ export class SubServiceService {
   }
 
   async findOne(id: string) {
-    console.log('createRequiredPageDto.subService', id);
     try {
       const singleService = await this.subServiceModel
         .findById(id)
@@ -544,6 +543,20 @@ export class SubServiceService {
     try {
       const reqUpdate = await this.subServiceModel
         .findOneAndUpdate({ _id: id }, { requiredPage: reqID })
+        .setOptions({ new: true });
+      if (reqUpdate) {
+        return reqUpdate;
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+
+  async deleteReqPage(id: string) {
+    try {
+      const reqUpdate = await this.subServiceModel
+        .findOneAndUpdate({ _id: id }, { requiredPage: null })
         .setOptions({ new: true });
       if (reqUpdate) {
         return reqUpdate;
